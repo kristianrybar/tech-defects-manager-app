@@ -1,5 +1,5 @@
 import { MapContainer, TileLayer } from 'react-leaflet'
-import { TDefect } from '~/pageDefectsManager/_t/TDefect'
+import { TDefect } from '~/defectsManager/_types/TDefect'
 import CustomMarker from './customMarker/CustomMarker'
 import FitBounds from './fitBounds/FitBounds'
 import css from './Map.module.css'

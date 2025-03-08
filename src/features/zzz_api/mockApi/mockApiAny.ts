@@ -2,8 +2,9 @@ export const mockApiAny = async (url, method, payloadDummy?) => {
     const host = '/mocks' 
     let postfix = '.json'
 
-    if (method == 'POST') 
+    if (method == 'POST') {
         postfix = '.POST.json'
+    } 
     
     let full = host + url + postfix
     try {
