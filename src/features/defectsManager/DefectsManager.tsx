@@ -11,6 +11,7 @@ import { createInitialFilters } from './_utils/createInitialFilters'
 import { prepareEnumsForInvestmentForm } from './_utils/prepareEnumsForInvestmentForm'
 import { updateFiltersOptionsCountDefects } from './_utils/updateFiltersOptionsCountDefects'
 import { isDefectChecked } from './_utils/isDefectChecked'
+import useTechDefectsSelecting from './_hooks/useTechDefectsSelecting'
 import LoadingCircle from '~/app_shared/loadingCircle/LoadingCircle'
 import FormInvestmentRequest_modal from './formInvestmentRequest_modal/FormInvestmentRequest_modal'
 import FilterControlSideBar from './filterControlSideBar/FilterControlSideBar.module'
@@ -23,7 +24,6 @@ const PageDefectsManager = () => {
   const [mockApiProcessing, set_mockApiProcessing] = useState<boolean>(false)
   const [defects, set_defects] = useState<TDefect[]>([])
   const [filters, set_filters] = useState<TFilter[]>([])
-  const [selectedDefects, set_selectedDefects] = useState<TDefect[]>([])
   const [mode, set_mode] = useState<'list' | 'detail'>('list')
   const [isOpenForm, set_isOpenForm] = useState<boolean>(false)
   const [formEnums, set_formEnums] = useState({
@@ -33,6 +33,8 @@ const PageDefectsManager = () => {
     planningGroups: [] as string[],
     investmentReasonCodes: [] as string[],
   })
+
+  const { selectedDefects, selectDefect, deselectDefect } = useTechDefectsSelecting()
 
   const navigate = useNavigate()
   const location = useLocation()
@@ -87,20 +89,6 @@ const PageDefectsManager = () => {
     set_mode('list')
   }
 
-  const selectDefect = (defect: TDefect) => {
-    if (!defect) {
-      return
-    }
-    set_selectedDefects(prev => ([...prev, defect]))
-  }
-
-  const deselectDefect = (defectID) => {
-    if (!defectID) {
-      return
-    }
-    set_selectedDefects(prev => prev.filter(defect => defect.defectID != defectID))
-  }
-
   useEffect(() => {
     getMockCoreData_andPrepareFormEnums()
   }, [])
@@ -129,7 +117,7 @@ const PageDefectsManager = () => {
   }, [isOpenForm])
   
   return (
-    <div className={css.homePageContainer}>
+    <>
       {mockApiProcessing && 
         <LoadingCircle
           size={5}
@@ -137,66 +125,68 @@ const PageDefectsManager = () => {
         />
       }
 
-      {mode == 'list' && !mockApiProcessing &&
-        <>
-          <div className={css.filterControlSideBarWrapper}>
-            <FilterControlSideBar
-              filters={filters}
-              onCheckbox={(optionIndex, filterName) => set_filters((prev) => toggleOffOnFilterOption(prev, filterName, optionIndex))}
-              onResetFilters={() => set_filters(resetAllFilters())}
-            />
-          </div>
-          
-          <div className={css.defectsWrapper}>
-            <Defects
+      <div className={css.defectsManagerContainer}>
+        {mode == 'list' && !mockApiProcessing &&
+          <>
+            <div className={css.filterControlSideBarWrapper}>
+              <FilterControlSideBar
+                filters={filters}
+                onCheckbox={(optionIndex, filterName) => set_filters((prev) => toggleOffOnFilterOption(prev, filterName, optionIndex))}
+                onResetFilters={() => set_filters(resetAllFilters())}
+              />
+            </div>
+            
+            <div className={css.defectsWrapper}>
+              <Defects
+                defects={defects}
+                filters={filters}
+                selectedDefects={selectedDefects}
+                onOpenDetail={(defectID) => openDefectDetail_andCreateUrlSearchParams(defectID)}
+                onFilterDefects={(filteredDefects) => set_filters(updateFiltersOptionsCountDefects(filteredDefects))}
+                onOpenForm={() => {
+                  !selectedDefects.length
+                    ? alert('Nie su vybrané žiadne nedostatky')
+                    : set_isOpenForm(true)
+                }}
+                onSelectDefect={(checked, d) => {
+                  checked
+                    ? selectDefect(d)
+                    : deselectDefect(d.defectID)
+                }}
+                checked={(defectID) => isDefectChecked(defectID, selectedDefects)}
+              />
+            </div>
+          </>
+        }
+        {mode == 'detail' && !mockApiProcessing &&
+          <div className={css.defectDetailWrapper}>
+            <DefectDetail
+              onGoBack={openDefectsList_andClearUrlSearchParams}
               defects={defects}
-              filters={filters}
-              selectedDefects={selectedDefects}
-              onOpenDetail={(defectID) => openDefectDetail_andCreateUrlSearchParams(defectID)}
-              onFilterDefects={(filteredDefects) => set_filters(updateFiltersOptionsCountDefects(filteredDefects))}
-              onOpenForm={() => {
-                !selectedDefects.length
-                  ? alert('Nie su vybrané žiadne nedostatky')
-                  : set_isOpenForm(true)
-              }}
+              checked={(defectID) => isDefectChecked(defectID, selectedDefects)}
               onSelectDefect={(checked, d) => {
                 checked
                   ? selectDefect(d)
                   : deselectDefect(d.defectID)
               }}
-              checked={(defectID) => isDefectChecked(defectID, selectedDefects)}
             />
           </div>
-        </>
-      }
-      {mode == 'detail' && !mockApiProcessing &&
-        <div className={css.defectDetailWrapper}>
-          <DefectDetail
-            onGoBack={openDefectsList_andClearUrlSearchParams}
-            defects={defects}
-            checked={(defectID) => isDefectChecked(defectID, selectedDefects)}
-            onSelectDefect={(checked, d) => {
-              checked
-                ? selectDefect(d)
-                : deselectDefect(d.defectID)
+        }
+        
+        {isOpenForm &&
+          <FormInvestmentRequest_modal
+            onClose={() => set_isOpenForm(false)}
+            selectedDefects={selectedDefects}
+            formEnums={formEnums}
+            onSuccessSubmit={async () => {
+              set_isOpenForm(false)
+              await sleep() // mock loading delay
+              alert('Investičná požiadavka bola úspešne vytvorená')
             }}
           />
-        </div>
-      }
-      
-      {isOpenForm &&
-        <FormInvestmentRequest_modal
-          onClose={() => set_isOpenForm(false)}
-          selectedDefects={selectedDefects}
-          formEnums={formEnums}
-          onSuccessSubmit={async () => {
-            set_isOpenForm(false)
-            await sleep() // mock loading delay
-            alert('Investičná požiadavka bola úspešne vytvorená')
-          }}
-        />
-      }
-    </div>
+        }
+      </div>
+    </>
   )
 }
 

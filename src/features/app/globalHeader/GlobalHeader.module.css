@@ -1,0 +1,51 @@
+.globalHeaderWrapper {
+  @apply fixed w-full h-[56px] bg-[#646464] z-[1001];
+
+  .container {
+    @apply max-w-[1500px] h-full mx-auto flex relative items-center justify-end px-4;
+
+    .brand {
+      h1 > span {
+        @apply absolute top-[25px] left-[16px] m-0 p-0 text-center text-transparent font-sans text-[1.4rem] 
+          uppercase tracking-[5px] -translate-y-[50%] bg-clip-text; 
+        background:linear-gradient(#262626, #eaeaea, #262626);
+        -webkit-background-clip: text;
+      }
+      h1 > span:nth-child(1) {
+        z-index: 2;
+      }
+      h1 > span:nth-child(2) {
+        z-index: 1;
+        text-shadow: 1px 1px 0 #262626, 2px 2px 0 #262626, 3px 3px 0 #262626,
+        4px 4px 0 #262626, 5px 5px 0 #262626, 1px 1px 0 #262626, -1px -1px 0 #fff;
+      }
+    }
+
+    .pageLinks {
+      @apply flex;
+
+      & > div {
+        @apply text-[#c0c0c0] cursor-pointer relative;
+
+        &::after {
+          @apply content-none h-[2px] absolute -bottom-[3px] left-0 right-0 bg-[#f3f3f3];
+        }
+        
+        &.active {
+          @apply text-[#f3f3f3];
+          &::after {
+            @apply content-[""];
+          }
+        }
+      }
+
+      & > div:hover {
+        @apply text-[#f3f3f3];
+      }
+
+      & > span {
+        @apply mx-4 text-[#a8a8a8];
+      }
+    }
+  }
+}

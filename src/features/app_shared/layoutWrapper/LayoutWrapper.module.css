@@ -1,0 +1,4 @@
+.layoutWrapper {
+  @apply w-full grow max-w-[1500px] flex flex-col mx-auto relative top-[56px];
+}
+

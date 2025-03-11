@@ -1,13 +1,19 @@
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
-import PageDefectsManager from '~/defectsManager/DefectsManager'
+import LayoutWrapper from '~/app_shared/layoutWrapper/LayoutWrapper'
+import DefectsManager from '~/defectsManager/DefectsManager'
+import GlobalHeader from '../globalHeader/GlobalHeader'
 
 const RouteSwitch = () => {
   return (
     <BrowserRouter>
-      <Routes>
-        <Route path='/' element={<Navigate to='defectsManager' />} />
-        <Route path='/defectsManager' element={<PageDefectsManager />} />
-      </Routes>
+      <GlobalHeader />
+      
+      <LayoutWrapper> 
+        <Routes>
+          <Route path='/' element={<Navigate to='tech-defects-manager' />} />
+          <Route path='/tech-defects-manager' element={<DefectsManager />} />
+        </Routes>
+      </LayoutWrapper>
     </BrowserRouter>
   )
 }
