@@ -11,7 +11,7 @@ import { createInitialFilters } from './_utils/createInitialFilters'
 import { prepareEnumsForInvestmentForm } from './_utils/prepareEnumsForInvestmentForm'
 import { updateFiltersOptionsCountDefects } from './_utils/updateFiltersOptionsCountDefects'
 import { isDefectChecked } from './_utils/isDefectChecked'
-import useTechDefectsSelecting from './_hooks/useTechDefectsSelecting'
+import useDefectsSelecting from './_hooks/useDefectsSelecting'
 import LoadingCircle from '~/app_shared/loadingCircle/LoadingCircle'
 import FormInvestmentRequest_modal from './formInvestmentRequest_modal/FormInvestmentRequest_modal'
 import FilterControlSideBar from './filterControlSideBar/FilterControlSideBar.module'
@@ -34,7 +34,7 @@ const PageDefectsManager = () => {
     investmentReasonCodes: [] as string[],
   })
 
-  const { selectedDefects, selectDefect, deselectDefect } = useTechDefectsSelecting()
+  const { selectedDefects, selectDefect, deselectDefect } = useDefectsSelecting()
 
   const navigate = useNavigate()
   const location = useLocation()
@@ -76,7 +76,7 @@ const PageDefectsManager = () => {
     }
     
     navigate({
-      pathname: '/defectsManager',
+      pathname: '/tech-defects-manager',
       search: createSearchParams({
         defectId
       }).toString()

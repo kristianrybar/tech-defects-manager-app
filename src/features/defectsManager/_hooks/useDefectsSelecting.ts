@@ -1,7 +1,7 @@
 import { useState } from "react"
 import { TDefect } from "../_types/TDefect"
 
-const useTechDefectsSelecting = () => {
+const useDefectsSelecting = () => {
   const [selectedDefects, set_selectedDefects] = useState<TDefect[]>([])
   
   const selectDefect = (defect: TDefect) => {
@@ -25,4 +25,4 @@ const useTechDefectsSelecting = () => {
   }
 }
 
-export default useTechDefectsSelecting
+export default useDefectsSelecting
