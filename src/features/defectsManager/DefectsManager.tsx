@@ -1,17 +1,15 @@
 import { useEffect, useState } from 'react'
 import { createSearchParams, useLocation, useNavigate } from 'react-router-dom'
-import { TFilter } from './_types/TFilter'
-import { TInvestmentRequestType } from './_types/TInvestmentRequestType'
 import { mock_GET_mockData } from './_mockApi/mock_GET_mockData'
 import { TDefect } from './_types/TDefect'
 import { sleep } from '~/zzz_react/sleep/sleep'
 import { resetAllFilters } from './_utils/resetAllFilters'
 import { toggleOffOnFilterOption } from './_utils/toggleOffOnFilterOption'
-import { createInitialFilters } from './_utils/createInitialFilters'
-import { prepareEnumsForInvestmentForm } from './_utils/prepareEnumsForInvestmentForm'
 import { updateFiltersOptionsCountDefects } from './_utils/updateFiltersOptionsCountDefects'
 import { isDefectChecked } from './_utils/isDefectChecked'
 import useDefectsSelecting from './_hooks/useDefectsSelecting'
+import useFormEnums from './_hooks/useFormEnums'
+import useFilters from './_hooks/useFilters'
 import LoadingCircle from '~/app_shared/loadingCircle/LoadingCircle'
 import FormInvestmentRequest_modal from './formInvestmentRequest_modal/FormInvestmentRequest_modal'
 import FilterControlSideBar from './filterControlSideBar/FilterControlSideBar.module'
@@ -23,27 +21,20 @@ import css from './DefectsManager.module.css'
 const PageDefectsManager = () => {
   const [mockApiProcessing, set_mockApiProcessing] = useState<boolean>(false)
   const [defects, set_defects] = useState<TDefect[]>([])
-  const [filters, set_filters] = useState<TFilter[]>([])
   const [mode, set_mode] = useState<'list' | 'detail'>('list')
-  const [isOpenForm, set_isOpenForm] = useState<boolean>(false)
-  const [formEnums, set_formEnums] = useState({
-    municipalities: [] as string[], 
-    investmentRequestTypes: [] as TInvestmentRequestType[],
-    technicalJustificationCodes: [] as string[],
-    planningGroups: [] as string[],
-    investmentReasonCodes: [] as string[],
-  })
+  const [isOpenFormModal, set_isOpenFormModal] = useState<boolean>(false)
 
   const { selectedDefects, selectDefect, deselectDefect } = useDefectsSelecting()
+  const { formEnums, prepareFormEnums } = useFormEnums()
+  const { filters, set_filters } = useFilters(defects)
 
   const navigate = useNavigate()
   const location = useLocation()
 
   const getMockCoreData_andPrepareFormEnums = async () => {
     set_mockApiProcessing(true)
-    await sleep() // mock loading delay
-
     const resp = await mock_GET_mockData()
+    await sleep() // mock loading delay
     if (resp.error) {
       set_mockApiProcessing(false)
       alert(resp.error)
@@ -51,22 +42,7 @@ const PageDefectsManager = () => {
     }
 
     set_defects(resp.finalDefects)
-    
-    const enums = prepareEnumsForInvestmentForm(resp.finalDefects, resp.investmentRequests)
-    if (!enums) {
-      set_mockApiProcessing(false)
-      return
-    }
-    
-    set_formEnums(prev => ({
-      ...prev,
-      investmentRequestTypes: resp.investmentRequestTypes,
-      technicalJustificationCodes: enums.technicalJustificationCodes,
-      investmentReasonCodes: enums.investmentReasonCodes,
-      municipalities: enums.municipalities,
-      planningGroups: enums.planningGroups,
-    }))
-
+    prepareFormEnums(resp.finalDefects, resp.investmentRequestTypes, resp.investmentRequests)
     set_mockApiProcessing(false)
   }
   
@@ -74,7 +50,7 @@ const PageDefectsManager = () => {
     if (!defectId) {
       return
     }
-    
+
     navigate({
       pathname: '/tech-defects-manager',
       search: createSearchParams({
@@ -94,27 +70,13 @@ const PageDefectsManager = () => {
   }, [])
 
   useEffect(() => {
-    if (!defects.length) {
-      return
-    }
-      
-    const initialFilters = createInitialFilters(defects)
-    if (!initialFilters) {
-      return
-    }
-      
-    set_filters(initialFilters)
-  }, [defects])
-
-  useEffect(() => {
     // prevent body scroll if form is open
-    if (!isOpenForm) {
+    if (!isOpenFormModal) {
       return
     }
-    
     document.body.style.overflow = 'hidden'
     return () => { document.body.style.overflow = 'unset' }
-  }, [isOpenForm])
+  }, [isOpenFormModal])
   
   return (
     <>
@@ -146,7 +108,7 @@ const PageDefectsManager = () => {
                 onOpenForm={() => {
                   !selectedDefects.length
                     ? alert('Nie su vybrané žiadne nedostatky')
-                    : set_isOpenForm(true)
+                    : set_isOpenFormModal(true)
                 }}
                 onSelectDefect={(checked, d) => {
                   checked
@@ -173,13 +135,13 @@ const PageDefectsManager = () => {
           </div>
         }
         
-        {isOpenForm &&
+        {isOpenFormModal &&
           <FormInvestmentRequest_modal
-            onClose={() => set_isOpenForm(false)}
+            onClose={() => set_isOpenFormModal(false)}
             selectedDefects={selectedDefects}
             formEnums={formEnums}
             onSuccessSubmit={async () => {
-              set_isOpenForm(false)
+              set_isOpenFormModal(false)
               await sleep() // mock loading delay
               alert('Investičná požiadavka bola úspešne vytvorená')
             }}

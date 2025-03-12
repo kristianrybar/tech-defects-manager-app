@@ -1,8 +1,9 @@
 import { useState, useEffect } from 'react'
 import UiInput from '~/app_shared/ui_input/UiInput'
+import SeverityLevelCircle from '~/app_shared/severityLevelCircle/SeverityLevelCircle'
 import css from './FilterGroup.module.css'
 
-const maxCountVisibleOptions = 5
+const maxCountVisibleFilterOptions = 5
 
 type Props = {
     filterName: string
@@ -15,7 +16,7 @@ const FilterGroup = (props: Props) => {
     const [showAll, setShowAll] = useState(false)
 
     const showOtherOptionsTextWithCount = () => {
-        const result: number = props.options?.length - maxCountVisibleOptions
+        const result: number = props.options?.length - maxCountVisibleFilterOptions
         if (result <= 0) {
             return ''
         }
@@ -24,7 +25,7 @@ const FilterGroup = (props: Props) => {
     }
 
     useEffect(() => {
-        let _visibleOptions = showAll ? props.options : props.options?.slice(0, maxCountVisibleOptions)
+        let _visibleOptions = showAll ? props.options : props.options?.slice(0, maxCountVisibleFilterOptions)
         if (!_visibleOptions) {
             return
         }
@@ -46,7 +47,10 @@ const FilterGroup = (props: Props) => {
                                 <span className={`${css.count} ${!option.countDefects && '!text-gray-400'}`}>
                                     {`(${option.countDefects})`}
                                 </span>
-                                {option.name}
+                                {props.filterName == "Úroveň závažnosti"
+                                    ? <SeverityLevelCircle severityLevel={option.name} />
+                                    : option.name
+                                }
                             </>
                         } 
                         value={option.name}

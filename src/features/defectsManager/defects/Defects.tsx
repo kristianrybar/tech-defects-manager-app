@@ -95,7 +95,7 @@ const Defects = (props: Props) => {
                             <div className={css.labels}>
                                 <div></div>
                                 <div>ID</div>
-                                <div>tech. objekt (rok výstavby)<hr />typ nedostatku (úroveň závažnosti)</div>
+                                <div>tech. objekt (rok výstavby)<hr />úroveň závažnosti - typ nedostatku</div>
                                 <div>stav nedostatku</div>
                                 <div>pretrvávanie nedostatku</div>
                                 <div>významný tech. objekt</div>

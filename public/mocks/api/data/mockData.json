@@ -1108,7 +1108,7 @@
     "defects": [
         {
             "defectID": "42",
-            "defectTypeIdentifier": "28",
+            "defectTypeIdentifier": "155",
             "technicalObjectID": "157296",
             "createdDTime": "2024-04-19T05:36:00",
             "defectState": "NOVY",
@@ -1153,7 +1153,7 @@
         },
         {
             "defectID": "32",
-            "defectTypeIdentifier": "28",
+            "defectTypeIdentifier": "155",
             "technicalObjectID": "157444",
             "createdDTime": "2024-04-19T08:04:00",
             "defectState": "NOVY",
@@ -1225,7 +1225,7 @@
         },
         {
             "defectID": "13",
-            "defectTypeIdentifier": "28",
+            "defectTypeIdentifier": "155",
             "technicalObjectID": "159061",
             "createdDTime": "2024-04-20T11:01:00",
             "defectState": "NOVY",
@@ -1252,7 +1252,7 @@
         },
         {
             "defectID": "20",
-            "defectTypeIdentifier": "28",
+            "defectTypeIdentifier": "106",
             "technicalObjectID": "159064",
             "createdDTime": "2024-04-20T11:04:00",
             "defectState": "NOVY",
@@ -1261,7 +1261,7 @@
         },
         {
             "defectID": "21",
-            "defectTypeIdentifier": "28",
+            "defectTypeIdentifier": "155",
             "technicalObjectID": "159065",
             "createdDTime": "2024-04-20T11:05:00",
             "defectState": "NOVY",
@@ -1324,7 +1324,7 @@
         },
         {
             "defectID": "26",
-            "defectTypeIdentifier": "28",
+            "defectTypeIdentifier": "106",
             "technicalObjectID": "159072",
             "createdDTime": "2024-04-20T11:12:00",
             "defectState": "NOVY",
@@ -1342,7 +1342,7 @@
         },
         {
             "defectID": "28",
-            "defectTypeIdentifier": "28",
+            "defectTypeIdentifier": "106",
             "technicalObjectID": "159075",
             "createdDTime": "2024-04-20T11:15:00",
             "defectState": "NOVY",
@@ -1965,7 +1965,7 @@
         },
         {
             "defectTypeIdentifier": "101",
-            "defectTypeName": "FV - voľné vodiče – rozpreky ",
+            "defectTypeName": "FV - voľné vodiče - rozpreky ",
             "defaultSeverityLevel": 2,
             "voltageLevelIdentifier": "VVN"
         },

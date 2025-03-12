@@ -1,0 +1,23 @@
+.severityLevelCircle {
+  @apply inline-block w-[16px] h-[16px];
+
+  & > div {
+    @apply w-full h-full text-[#ffffff] rounded-full flex justify-center items-center text-[12px] font-semibold;
+
+    &.one {
+      @apply bg-[#ffed63cb] text-[#252525];
+    }
+    &.two {
+      @apply bg-[#dd8f22b6];
+    }
+    &.three {
+      @apply bg-[#d75252b6];
+    }
+    &.four {
+      @apply bg-[#4f3306b6];
+    }
+    &.error {
+      @apply bg-[#c9beff];
+    }
+  }
+}

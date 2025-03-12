@@ -3,6 +3,7 @@ import { TDefect } from '../../_types/TDefect'
 import { FaArrowRightLong } from "react-icons/fa6"
 import { highlightText } from '../_utils/highlightText'
 import UiInput from '~/app_shared/ui_input/UiInput'
+import SeverityLevelCircle from '~/app_shared/severityLevelCircle/SeverityLevelCircle'
 import css from './Defect.module.css'
 
 type Props = {
@@ -46,9 +47,14 @@ const Defect = (props: Props) => {
           {highlightText(d.technicalObject.technicalObjectName, props.searchQuery || '')}&nbsp;
           {highlightText(`${d.technicalObject.constructionYear ? '(' + d.technicalObject.constructionYear?.toString() + ')' : ''}`, props.searchQuery || '')}
         </div>
-        <div>
-          {highlightText(d.defectType.defectTypeName, props.searchQuery || '')}&nbsp;
-          {highlightText(`${d.defectType.defaultSeverityLevel ? '(' + d.defectType.defaultSeverityLevel + ')' : ''}`, props.searchQuery || '')}
+        <div className={css._truncate}> 
+          <SeverityLevelCircle
+            severityLevel={d.defectType.defaultSeverityLevel}
+            severityLevelSpan={highlightText(`${d.defectType.defaultSeverityLevel ? + d.defectType.defaultSeverityLevel : ''}`, props.searchQuery || '')}
+          />&nbsp;
+          <span title={d.defectType.defectTypeName || ""}>
+            - {highlightText(d.defectType.defectTypeName, props.searchQuery || '')}
+          </span>
         </div>
       </div>
       <div>

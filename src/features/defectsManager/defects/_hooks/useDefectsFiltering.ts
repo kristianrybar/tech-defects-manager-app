@@ -26,7 +26,7 @@ const useDefectsFiltering = (filters) => {
       .filter(defect => filterByMunicipality(defect, _findAndReturnFilterByName('Obec')))
       .filter(defect => filterByDefectState(defect, _findAndReturnFilterByName('Stav nedostatku')))
 
-      return filteredDefects
+    return filteredDefects
   }
 
   const _findAndReturnFilterByName = (filterName) => {
