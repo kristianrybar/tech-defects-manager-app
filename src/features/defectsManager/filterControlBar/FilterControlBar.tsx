@@ -1,5 +1,4 @@
 import { UiDatePickerRange } from '~/app_shared/ui_datePickerRange/UiDatePickerRange'
-import { GoSearch } from "react-icons/go";
 import UiInput from '~/app_shared/ui_input/UiInput'
 import UiDropdown from '~/app_shared/ui_dropdown/UiDropdown'
 import css from './FilterControlBar.module.css'

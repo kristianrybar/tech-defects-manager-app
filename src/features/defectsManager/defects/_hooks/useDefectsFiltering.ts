@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react'
 import { filterByConstructionYear } from '../_utils/filterByConstructionYear'
 import { filterByCruciality } from '../_utils/filterByCruciality'
 import { filterByDateRange } from '../_utils/filterByDateRange'
@@ -9,8 +10,17 @@ import { filterBySeverityLevel } from '../_utils/filterBySeverityLevel'
 import { filterBySupervisor } from '../_utils/filterBySupervisor'
 import { filterByVoltageLevel } from '../_utils/filterByVoltageLevel'
 import { sortByDate } from '../_utils/sortByDate'
+import { TDefect } from '~/defectsManager/_types/TDefect'
 
-const useDefectsFiltering = (filters) => {
+const useDefectsFiltering = (
+  defects: TDefect[],
+  filters,
+  searchQuery: string,
+  dropdownQuery: string,
+  dateFilter
+) => {
+  const [filteredDefects, set_filteredDefects] = useState<TDefect[]>(defects || [])
+  
 
   const filterDefects = (defects, dropdownQuery, searchQuery, dateFilter) => {
     const filteredDefects = defects
@@ -32,8 +42,18 @@ const useDefectsFiltering = (filters) => {
   const _findAndReturnFilterByName = (filterName) => {
     return filters.find(f => f.filterName == filterName)
   }
+
+  useEffect(() => {
+    const _filteredDefects = filterDefects(defects, dropdownQuery, searchQuery, dateFilter)
+    if (!_filteredDefects) {
+        alert('Filtering defects failed')
+        return
+    }    
+    set_filteredDefects(_filteredDefects)
+  }, [searchQuery, dropdownQuery, dateFilter, defects, filters])
   
   return {
+    filteredDefects,
     filterDefects
   }
 }
