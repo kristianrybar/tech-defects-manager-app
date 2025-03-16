@@ -30,7 +30,7 @@ const Defects = (props: Props) => {
         startDate: '',
         endDate: '',
     })
-
+    
     const { filterDefects } = useDefectsFiltering(props.filters)
 
 

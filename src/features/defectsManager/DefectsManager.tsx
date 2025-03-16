@@ -42,7 +42,7 @@ const PageDefectsManager = () => {
     }
 
     set_defects(resp.finalDefects)
-    prepareFormEnums(resp.finalDefects, resp.investmentRequestTypes, resp.investmentRequests)
+    prepareFormEnums(resp.finalDefects, resp.investmentRequests, resp.investmentRequestTypes)
     set_mockApiProcessing(false)
   }
   
@@ -93,7 +93,7 @@ const PageDefectsManager = () => {
             <div className={css.filterControlSideBarWrapper}>
               <FilterControlSideBar
                 filters={filters}
-                onCheckbox={(optionIndex, filterName) => set_filters((prev) => toggleOffOnFilterOption(prev, filterName, optionIndex))}
+                onCheckbox={(optionIndex, filterName) => set_filters(toggleOffOnFilterOption(filterName, optionIndex))}
                 onResetFilters={() => set_filters(resetAllFilters())}
               />
             </div>
@@ -134,20 +134,20 @@ const PageDefectsManager = () => {
             />
           </div>
         }
-        
-        {isOpenFormModal &&
-          <FormInvestmentRequest_modal
-            onClose={() => set_isOpenFormModal(false)}
-            selectedDefects={selectedDefects}
-            formEnums={formEnums}
-            onSuccessSubmit={async () => {
-              set_isOpenFormModal(false)
-              await sleep() // mock loading delay
-              alert('Investičná požiadavka bola úspešne vytvorená')
-            }}
-          />
-        }
       </div>
+
+      {isOpenFormModal &&
+        <FormInvestmentRequest_modal
+          onClose={() => set_isOpenFormModal(false)}
+          selectedDefects={selectedDefects}
+          formEnums={formEnums}
+          onSuccessSubmit={async () => {
+            set_isOpenFormModal(false)
+            await sleep() // mock loading delay
+            alert('Investičná požiadavka bola úspešne vytvorená')
+          }}
+        />
+      }
     </>
   )
 }

@@ -1,3 +1,4 @@
+import { GoSearch } from 'react-icons/go'
 import css from './UiInput.module.css'
 
 type Props = {
@@ -10,6 +11,7 @@ type Props = {
     checked?: boolean
     disabled?: boolean
     error?: string
+    withSearchIcon?: boolean
     // CSS
     wrapperClassName?: string
     width?: string
@@ -35,6 +37,8 @@ const UiInput = (props: Props) => {
             <input
                 className={`
                     ${props.type == 'checkbox' && css.checkbox}
+                    ${props.withSearchIcon && css.withSearchIcon}
+                    peer/input
                 `}
                 type={props.type || 'text'}
                 value={props.value ? props.value : props.value === 0 ? 0 : ''}
@@ -48,6 +52,15 @@ const UiInput = (props: Props) => {
                 <div className={css.error}>{props.error}</div>
             }
 
+            {props.withSearchIcon &&
+                <GoSearch 
+                    stroke="3"
+                    className={`
+                        ${css.searchIcon} 
+                        peer-focus/input:text-black
+                    `}
+                />
+            }
         </label>
     )
 }

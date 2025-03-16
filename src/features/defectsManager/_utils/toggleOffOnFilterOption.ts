@@ -1,11 +1,16 @@
-export const toggleOffOnFilterOption = (prevState, filterName, optionIndex) => {
-  const toggleOption = (option, idx) =>
-    idx != optionIndex ? option : { ...option, isActive: !option.isActive }
+import { produce } from "immer"
 
-  const updateFilter = (filter) =>
-    filter.filterName != filterName
+export const toggleOffOnFilterOption = (filterName, optionIndex) => {
+  const _toggleOption = (option, idx) => {
+    return idx != optionIndex ? option : { ...option, isActive: !option.isActive }
+  }
+  const _updateFilter = (filter) => {
+    return filter.filterName != filterName 
       ? filter
-      : { ...filter, filterOptions: filter.filterOptions.map(toggleOption) }
+      : { ...filter, filterOptions: filter.filterOptions.map(_toggleOption) }
+  }
 
-  return prevState.map(updateFilter)
+  return produce((draft)=> {
+    return draft.map(_updateFilter)
+  })
 }

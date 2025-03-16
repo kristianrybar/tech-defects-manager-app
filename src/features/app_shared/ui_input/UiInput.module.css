@@ -1,13 +1,16 @@
 .uiInputWrapper {
-    @apply flex flex-col justify-center items-start text-sm font-medium;
+    @apply relative flex flex-col justify-center items-start text-sm font-normal;
     &.uiCheckboxWrapper {
-        @apply h-auto gap-2 flex-row-reverse justify-end items-center font-normal;
+        @apply h-auto gap-2 flex-row-reverse justify-end items-center;
     }
     &.disabled {
-        @apply text-gray-400;
+        @apply text-gray-300;
     }
     input {
         @apply h-[40px] relative w-full border border-[--color4] rounded px-3 py-1;
+        &::placeholder {
+            @apply text-gray-400 tracking-[0.5px];
+        }
         &.checkbox {
             @apply w-5 h-5 shadow-none appearance-none p-0 border-[--color5] bg-white hover:bg-[--color3] cursor-pointer;
             &:checked {
@@ -23,8 +26,15 @@
                 @apply hover:bg-white border-[--color3] cursor-not-allowed;
             }
         }
+        &.withSearchIcon {
+            @apply pl-8;
+        }
     }
     .error {
         @apply text-xs text-red-600;
+    }
+
+    .searchIcon {
+        @apply absolute left-[10px] top-[50%] -translate-y-[50%] z-[1] text-[1rem] text-gray-400;
     }
 }
