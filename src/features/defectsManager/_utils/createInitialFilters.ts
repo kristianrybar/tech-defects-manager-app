@@ -1,6 +1,6 @@
 import { TDefect } from '../_types/TDefect'
 import { TFilter } from '../_types/TFilter'
-import { TFilterOption } from '../_types/TFilterOption'
+import { TFilterOption } from '../filterControlSideBar/_types/TFilterOption'
 
 export const createInitialFilters = (defects: TDefect[]) => {
   const filters: TFilter[] = [

@@ -1,8 +1,8 @@
 import { useState } from "react"
 import { TDefect } from "../_types/TDefect"
-import { TInvestmentRequestType } from "../_types/TInvestmentRequestType"
+import { TInvestmentRequestType } from "../../investmentsManager/_types/TInvestmentRequestType"
 import { prepareEnumsForInvestmentForm } from "../_utils/prepareEnumsForInvestmentForm"
-import { TInvestmentRequest } from "../_types/TInvestmentRequest"
+import { TInvestmentRequest } from "../../investmentsManager/_types/TInvestmentRequest"
 
 const useFormEnums = () => {
   const [formEnums, set_formEnums] = useState({

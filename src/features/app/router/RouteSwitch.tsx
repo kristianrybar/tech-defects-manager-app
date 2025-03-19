@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 import LayoutWrapper from '~/app_shared/layoutWrapper/LayoutWrapper'
 import DefectsManager from '~/defectsManager/DefectsManager'
 import GlobalHeader from '../globalHeader/GlobalHeader'
+import InvestmentRequestsManager from '~/investmentsManager/InvestmentRequestsManager'
 
 const RouteSwitch = () => {
   return (
@@ -12,6 +13,7 @@ const RouteSwitch = () => {
         <Routes>
           <Route path='/' element={<Navigate to='tech-defects-manager' />} />
           <Route path='/tech-defects-manager' element={<DefectsManager />} />
+          <Route path='/investment-requests-manager' element={<InvestmentRequestsManager />} />
         </Routes>
       </LayoutWrapper>
     </BrowserRouter>

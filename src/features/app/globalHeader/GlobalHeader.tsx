@@ -25,9 +25,9 @@ const GlobalHeader = () => {
           </div>
           <span>|</span>
           <div
-            onClick={() => navigate('/investment-requests')}
+            onClick={() => navigate('/investment-requests-manager')}
             className={`
-              ${location.pathname === '/investment-requests' && css.active}
+              ${location.pathname === '/investment-requests-manager' && css.active}
             `}
           >
             Investičné požiadavky
