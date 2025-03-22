@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react"
 import { TDefect } from "../_types/TDefect"
-import { TInvestmentRequestType } from "../../investmentsManager/_types/TInvestmentRequestType"
+import { TInvestmentRequestType } from "../../investmentRequestsManager/_types/TInvestmentRequestType"
 import { prepareEnumsForInvestmentForm } from "../_utils/prepareEnumsForInvestmentForm"
-import { TInvestmentRequest } from "../../investmentsManager/_types/TInvestmentRequest"
+import { TInvestmentRequest } from "../../investmentRequestsManager/_types/TInvestmentRequest"
 import { useDefectsStore } from "../_stores/useDefectsStore"
-import { useInvestmentRequestsStore } from "~/investmentsManager/_stores/useInvestmentRequestsStore"
+import { useInvestmentRequestsStore } from "~/investmentRequestsManager/_stores/useInvestmentRequestsStore"
 
 
 const useFormEnums = () => {

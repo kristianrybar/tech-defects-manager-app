@@ -3,7 +3,7 @@ import LayoutWrapper from '~/app_shared/layoutWrapper/LayoutWrapper'
 import InitialLoadMockData from '~/app_shared/initialLoadMockData/InitialLoadMockData'
 import GlobalHeader from '../globalHeader/GlobalHeader'
 import DefectsManager from '~/defectsManager/DefectsManager'
-import InvestmentRequestsManager from '~/investmentsManager/InvestmentRequestsManager'
+import InvestmentRequestsManager from '~/investmentRequestsManager/InvestmentRequestsManager'
 
 const RouteSwitch = () => {
   return (
