@@ -1,14 +1,14 @@
 import { useEffect, useState } from 'react'
 import { useSearchParams } from 'react-router-dom'
 import { FaArrowLeftLong } from "react-icons/fa6"
-import { TDefect } from '../_t/TDefect'
+import { TDefect } from '../_types/TDefect'
 import Map from '~/app_shared/map/Map'
 import css from './DefectDetail.module.css'
 
 type Props = {
   onGoBack: () => void
   defects: TDefect[]
-  checked: (d) => boolean
+  isDefectChecked: (d) => boolean
   onSelectDefect: (checked, d: TDefect) => void
 }
 
@@ -17,6 +17,7 @@ const DefectDetail = (props: Props) => {
   const [searchParams] = useSearchParams()
 
   useEffect(() => {
+    console.log('TODO: DefectDetail useEffect - skontrolovať tento useEffect');
     const defectId = searchParams.get('defectId')
     if (!defectId) {
       return
@@ -31,7 +32,7 @@ const DefectDetail = (props: Props) => {
     } 
     
     set_findedDefect(_findedDefect)
-  })
+  }, [])
   
   const d = findedDefect
   return (
@@ -90,7 +91,7 @@ const DefectDetail = (props: Props) => {
             <Map
               zoom={14}
               defects={[findedDefect]}
-              checked={(defectID) => props.checked(defectID)}
+              isDefectChecked={(defectID) => props.isDefectChecked(defectID)}
               onCheckbox={(e, d: TDefect) => props.onSelectDefect(e.target.checked, d)}
             />
           </div>

@@ -7,8 +7,8 @@ import css from './Map.module.css'
 type Props = {
   zoom: number
   defects: TDefect[]
-  checked: (defectID) => boolean
-  onCheckbox: (e, d) => void
+  isDefectChecked: (defectID) => boolean
+  onCheckbox: (e, defect) => void
 }
 
 const Map = (props: Props) => {
@@ -30,12 +30,12 @@ const Map = (props: Props) => {
       />
 
       {props.defects
-        .map((d) => (
+        .map((defect) => (
           <CustomMarker
-            key={d.defectID}
-            defect={d}
-            checked={props.checked(d.defectID)}
-            onCheckbox={(e) => props.onCheckbox(e, d)}
+            key={defect.defectID}
+            defect={defect}
+            isDefectChecked={props.isDefectChecked(defect.defectID)}
+            onCheckbox={(e) => props.onCheckbox(e, defect)}
           />
       ))}
     </MapContainer>

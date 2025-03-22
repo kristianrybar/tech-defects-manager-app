@@ -1,12 +1,12 @@
 import { useEffect, useRef } from 'react'
-import { Marker, Popup, Tooltip } from 'react-leaflet'
-import { TDefect } from '~/pageDefectsManager/_t/TDefect'
+import { Circle, Marker, Popup, Tooltip } from 'react-leaflet'
+import { TDefect } from '~/defectsManager/_types/TDefect'
 import UiInput from '~/app_shared/ui_input/UiInput'
 import css from './CustomMarker.module.css'
 
 type Props = {
     defect: TDefect
-    checked: boolean
+    isDefectChecked: boolean
     onCheckbox: (e) => void
 }
 
@@ -29,16 +29,23 @@ const CustomMarker = (props: Props) => {
             ref={refMarker}
             key={d.defectID}
             position={[d.technicalObject?.gpsCoordinates?.[0], d.technicalObject?.gpsCoordinates?.[1]]}
-        >
+        >   
+            {props.isDefectChecked &&
+                <Circle 
+                    center={[d.technicalObject?.gpsCoordinates?.[0], d.technicalObject?.gpsCoordinates?.[1]]} 
+                    radius={30}
+                    pathOptions={{color: 'red'}}
+                />
+            }
             <Tooltip>
                 <div 
                     className={`
                         ${css.tooltipInner}
-                        ${props.checked && css.checked}
+                        ${props.isDefectChecked && css.checked}
                     `}
                 >
                     <div>
-                        <span>{props.checked && 'Označený'}</span>
+                        <span>{props.isDefectChecked && 'Označený'}</span>
                     </div>
                     {d.technicalObject.technicalObjectName}
                 </div>
@@ -46,10 +53,10 @@ const CustomMarker = (props: Props) => {
             <Popup>
                 <div className={css.popup}>
                     <UiInput
-                        wrapperClassName={`${props.checked && css.checked}`}
-                        label={props.checked ? 'Označený' : 'Označiť nedostatok'}
+                        wrapperClassName={`${props.isDefectChecked && css.checked}`}
+                        label={props.isDefectChecked ? 'Označený' : 'Označiť nedostatok'}
                         type='checkbox'
-                        checked={props.checked || false}
+                        checked={props.isDefectChecked || false}
                         onChange={props.onCheckbox}
                         value=''
                     />

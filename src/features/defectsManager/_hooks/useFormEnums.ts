@@ -1,10 +1,16 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { TDefect } from "../_types/TDefect"
 import { TInvestmentRequestType } from "../../investmentsManager/_types/TInvestmentRequestType"
 import { prepareEnumsForInvestmentForm } from "../_utils/prepareEnumsForInvestmentForm"
 import { TInvestmentRequest } from "../../investmentsManager/_types/TInvestmentRequest"
+import { useDefectsStore } from "../_stores/useDefectsStore"
+import { useInvestmentRequestsStore } from "~/investmentsManager/_stores/useInvestmentRequestsStore"
+
 
 const useFormEnums = () => {
+  const { defects } = useDefectsStore();
+  const { investmentRequests, investmentRequestsTypes } = useInvestmentRequestsStore();
+
   const [formEnums, set_formEnums] = useState({
     municipalities: [] as string[], 
     investmentRequestTypes: [] as TInvestmentRequestType[],
@@ -15,7 +21,7 @@ const useFormEnums = () => {
 
   const prepareFormEnums = (
     defects: TDefect[], 
-    investmentRequests: TInvestmentRequest, 
+    investmentRequests: TInvestmentRequest[], 
     investmentRequestTypes: TInvestmentRequestType[]
   ) => {    
     const enums = prepareEnumsForInvestmentForm(defects, investmentRequests)
@@ -32,6 +38,14 @@ const useFormEnums = () => {
       planningGroups: enums.planningGroups,
     }))
   }
+
+  useEffect(() => {
+    console.log('useFormEnums useEffect')
+    if (!defects.length || !investmentRequests.length || !investmentRequestsTypes.length) {
+      return
+    }
+    prepareFormEnums(defects, investmentRequests, investmentRequestsTypes)
+  }, [defects, investmentRequests, investmentRequestsTypes])
 
   return {
     formEnums,

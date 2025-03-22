@@ -1,7 +1,7 @@
 import { useEffect } from 'react'
 import { useMap } from 'react-leaflet'
 import { LatLngBounds, LatLngBoundsLiteral } from 'leaflet'
-import { TDefect } from '~/pageDefectsManager/_t/TDefect'
+import { TDefect } from '~/defectsManager/_types/TDefect'
 
 type Props = {
     defects: TDefect[]

@@ -9,7 +9,7 @@ type Props = {
   searchQuery: string
   onOpenDetail: (defectID) => void
   onSelectDefect: (defect, isChecked) => void
-  isDefectchecked: (defectID) => boolean
+  isDefectChecked: (defectID) => boolean
 }
 
 const Defects = (props: Props) => {
@@ -38,7 +38,7 @@ const Defects = (props: Props) => {
                   onOpenDetail={() => props.onOpenDetail(d.defectID)}
                   onCheckbox={(e) => props.onSelectDefect(e.target.checked, d)}
                   searchQuery={props.searchQuery}
-                  checked={props.isDefectchecked(d.defectID)}
+                  checked={props.isDefectChecked(d.defectID)}
                 />
               )}
             </>
@@ -52,7 +52,7 @@ const Defects = (props: Props) => {
             zoom={14}
             defects={props.filteredDefects.filter(d => d.defectTypeIdentifier > '0')}
             onCheckbox={(e, d: TDefect) => props.onSelectDefect(e.target.checked, d)}
-            checked={(defectID) => props.isDefectchecked(defectID)}
+            isDefectChecked={(defectID) => props.isDefectChecked(defectID)}
           />
         </div>
       }

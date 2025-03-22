@@ -1,18 +1,16 @@
 import { useEffect, useState } from 'react'
 import { createSearchParams, useLocation, useNavigate } from 'react-router-dom'
-import { mock_GET_mockData } from './_mockApi/mock_GET_mockData'
-import { TDefect } from './_types/TDefect'
 import { sleep } from '~/zzz_react/sleep/sleep'
 import { resetAllFilters } from './_utils/resetAllFilters'
 import { toggleOffOnFilterOption } from './_utils/toggleOffOnFilterOption'
 import { updateFiltersOptionsCountDefects } from './_utils/updateFiltersOptionsCountDefects'
 import { isDefectChecked } from './_utils/isDefectChecked'
+import { useDefectsStore } from './_stores/useDefectsStore'
 import useDefectsSelecting from './_hooks/useDefectsSelecting'
 import useFormEnums from './_hooks/useFormEnums'
 import useDefectsFiltering from './defects/_hooks/useDefectsFiltering'
 import useFilterControlBar from './filterControlBar/_hooks/useFilterControlBar'
 import useFilters from './_hooks/useFilters'
-import LoadingCircle from '~/app_shared/loadingCircle/LoadingCircle'
 import FormInvestmentRequest_modal from './formInvestmentRequest_modal/FormInvestmentRequest_modal'
 import FilterControlSideBar from './filterControlSideBar/FilterControlSideBar.module'
 import Defects from './defects/Defects'
@@ -25,34 +23,19 @@ import css from './DefectsManager.module.css'
 const PageDefectsManager = () => {
   const [mode, set_mode] = useState<'list' | 'detail'>('list')
   const [listMode, set_listMode] = useState<'table' | 'map'>('table')
-  const [defects, set_defects] = useState<TDefect[]>([])
-  const [mockApiProcessing, set_mockApiProcessing] = useState<boolean>(false)
+  // const [defects, set_defects] = useState<TDefect[]>([])
   const [isOpenFormModal, set_isOpenFormModal] = useState<boolean>(false)
+  const { defects } = useDefectsStore()
   
   const { searchQuery, set_searchQuery, dropdownQuery, set_dropdownQuery, 
     dateQuery, selectDateQuery_withValidation } = useFilterControlBar()
   const { selectedDefects, selectDefect, deselectDefect } = useDefectsSelecting()
-  const { formEnums, prepareFormEnums } = useFormEnums()
+  const { formEnums } = useFormEnums()
   const { filters, set_filters } = useFilters(defects)
   const { filteredDefects } = useDefectsFiltering(defects, filters, searchQuery, dropdownQuery, dateQuery)
 
   const navigate = useNavigate()
   const location = useLocation()
-
-  const getMockCoreData_andPrepareFormEnums = async () => {
-    set_mockApiProcessing(true)
-    const resp = await mock_GET_mockData()
-    await sleep() // mock loading delay
-    if (resp.error) {
-      set_mockApiProcessing(false)
-      alert(resp.error)
-      return 
-    }
-
-    set_defects(resp.finalDefects)
-    prepareFormEnums(resp.finalDefects, resp.investmentRequests, resp.investmentRequestTypes)
-    set_mockApiProcessing(false)
-  }
   
   const openDefectDetail_andCreateUrlSearchParams = (defectId) => {
     if (!defectId) {
@@ -73,10 +56,6 @@ const PageDefectsManager = () => {
   }
 
   useEffect(() => {
-    getMockCoreData_andPrepareFormEnums()
-  }, [])
-
-  useEffect(() => {
     // prevent body scroll if form is open
     if (!isOpenFormModal) {
       return
@@ -94,15 +73,8 @@ const PageDefectsManager = () => {
   
   return (
     <>
-      {mockApiProcessing && 
-        <LoadingCircle
-          size={5}
-          loadingColor='green'
-        />
-      }
-
       <div className={css.defectsManagerContainer}>
-        {mode == 'list' && !mockApiProcessing &&
+        {mode == 'list' && defects.length > 0 &&
           <>
             <div className={css.filterControlSideBarWrapper}>
               <FilterControlSideBar
@@ -148,19 +120,19 @@ const PageDefectsManager = () => {
                     ? selectDefect(d)
                     : deselectDefect(d.defectID)
                 }}
-                isDefectchecked={(defectID) => isDefectChecked(defectID, selectedDefects)}
+                isDefectChecked={(defectID) => isDefectChecked(defectID, selectedDefects)}
                 searchQuery={searchQuery}
               />
             </div>
           </>
         }
         
-        {mode == 'detail' && !mockApiProcessing &&
+        {mode == 'detail' && defects.length > 0 &&
           <div className={css.defectDetailWrapper}>
             <DefectDetail
               onGoBack={openDefectsList_andClearUrlSearchParams}
               defects={defects}
-              checked={(defectID) => isDefectChecked(defectID, selectedDefects)}
+              isDefectChecked={(defectID) => isDefectChecked(defectID, selectedDefects)}
               onSelectDefect={(checked, d) => {
                 checked
                   ? selectDefect(d)

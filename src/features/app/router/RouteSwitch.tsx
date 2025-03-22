@@ -1,12 +1,15 @@
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 import LayoutWrapper from '~/app_shared/layoutWrapper/LayoutWrapper'
-import DefectsManager from '~/defectsManager/DefectsManager'
+import InitialLoadMockData from '~/app_shared/initialLoadMockData/InitialLoadMockData'
 import GlobalHeader from '../globalHeader/GlobalHeader'
+import DefectsManager from '~/defectsManager/DefectsManager'
 import InvestmentRequestsManager from '~/investmentsManager/InvestmentRequestsManager'
 
 const RouteSwitch = () => {
   return (
     <BrowserRouter>
+      <InitialLoadMockData />
+
       <GlobalHeader />
       
       <LayoutWrapper> 
