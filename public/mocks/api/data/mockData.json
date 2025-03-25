@@ -2,136 +2,136 @@
     "investmentRequests": [
         {
             "investmentRequestID": "2",
-            "spiInvestmentID": "INV-SPI-002-2024",
+            "spiInvestmentID": "INV-x-002-2024",
             "investmentRequestTypeIdentifier": "1",
             "investmentName": "Výmena rozvodnej skrine",
             "municipality": "Bratislava",
             "expectedImplementationDate": "2024-01-01",
-            "technicalJustificationCode": "PP02/2024",
-            "planningGroup": "BA011",
+            "technicalJustificationCode": "xx22/2024",
+            "planningGroup": "xy011",
             "implementationDateJustification": "00018",
             "estimatedInvestmentCosts": 200,
             "processorID": "T200009",
-            "investmentReasonCode": "IR45",
+            "investmentReasonCode": "x45",
             "investmentReasonText": null,
             "currentStateDescription": "SCHVALENA",
             "proposedSolution": "Výmena rozvodnej skrine",
             "defectIDs": ["2"],
-            "investmentRequestStateIdentifier": "0001124"
+            "investmentRequestStateIdentifier": "x1124"
         },
         {
             "investmentRequestID": "4",
-            "spiInvestmentID": "INV-SPI-004-2024",
+            "spiInvestmentID": "INV-x-004-2024",
             "investmentRequestTypeIdentifier": "1",
             "investmentName": "Výmena rozvodnej skrine",
             "municipality": "Bratislava",
             "expectedImplementationDate": "2024-01-01",
-            "technicalJustificationCode": "PP04/2024",
-            "planningGroup": "BA011",
+            "technicalJustificationCode": "xx44/2024",
+            "planningGroup": "xy011",
             "implementationDateJustification": "00015",
             "estimatedInvestmentCosts": 5000,
             "processorID": "T200009",
-            "investmentReasonCode": "IR45",
+            "investmentReasonCode": "x45",
             "investmentReasonText": null,
             "currentStateDescription": "ZAMIETNUTA",
             "proposedSolution": "Výmena rozvodnej skrine",
             "defectIDs": ["4"],
-            "investmentRequestStateIdentifier": "0001168"
+            "investmentRequestStateIdentifier": "x1168"
         },
         {
             "investmentRequestID": "5",
-            "spiInvestmentID": "INV-SPI-005-2024",
+            "spiInvestmentID": "INV-x-005-2024",
             "investmentRequestTypeIdentifier": "1",
             "investmentName": "Výmena rozvodnej skrine",
             "municipality": "Bratislava",
             "expectedImplementationDate": "2024-01-01",
-            "technicalJustificationCode": "PP05/2024",
-            "planningGroup": "BA011",
+            "technicalJustificationCode": "xx55/2024",
+            "planningGroup": "xy011",
             "implementationDateJustification": "00011",
             "estimatedInvestmentCosts": 1000,
             "processorID": "T200009",
-            "investmentReasonCode": "IR45",
+            "investmentReasonCode": "x45",
             "investmentReasonText": null,
             "currentStateDescription": "SCHVALENA",
             "proposedSolution": "Výmena rozvodnej skrine",
             "defectIDs": ["5"],
-            "investmentRequestStateIdentifier": "0001011"
+            "investmentRequestStateIdentifier": "x1011"
         },
         {
             "investmentRequestID": "6",
-            "spiInvestmentID": "INV-SPI-006-2024",
+            "spiInvestmentID": "INV-x-006-2024",
             "investmentRequestTypeIdentifier": "1",
             "investmentName": "Výmena rozvodnej skrine",
             "municipality": "Bratislava",
             "expectedImplementationDate": "2024-01-01",
-            "technicalJustificationCode": "PP06/2024",
-            "planningGroup": "BA011",
+            "technicalJustificationCode": "xx66/2024",
+            "planningGroup": "xy011",
             "implementationDateJustification": "00013",
             "estimatedInvestmentCosts": 1200,
             "processorID": "T200009",
-            "investmentReasonCode": "IR45",
+            "investmentReasonCode": "x45",
             "investmentReasonText": null,
             "currentStateDescription": "ZADANA",
             "proposedSolution": "Výmena rozvodnej skrine",
             "defectIDs": ["6"],
-            "investmentRequestStateIdentifier": "0001168"
+            "investmentRequestStateIdentifier": "x1168"
         },
         {
             "investmentRequestID": "1",
-            "spiInvestmentID": "INV-SPI-001-2024",
+            "spiInvestmentID": "INV-x-001-2024",
             "investmentRequestTypeIdentifier": "1",
             "investmentName": "Výmena rozvodnej skrine",
             "municipality": "Bratislava",
             "expectedImplementationDate": "2024-01-01",
-            "technicalJustificationCode": "PP01/2024",
-            "planningGroup": "BA011",
+            "technicalJustificationCode": "xx11/2024",
+            "planningGroup": "xy011",
             "implementationDateJustification": "00016",
             "estimatedInvestmentCosts": 1500,
             "processorID": "T200009",
-            "investmentReasonCode": "IR45",
+            "investmentReasonCode": "x45",
             "investmentReasonText": null,
             "currentStateDescription": "UKONCENA_SPIN",
             "proposedSolution": "Výmena rozvodnej skrine",
             "defectIDs": ["1"],
-            "investmentRequestStateIdentifier": "0001159"
+            "investmentRequestStateIdentifier": "x1159"
         },
         {
             "investmentRequestID": "3",
-            "spiInvestmentID": "INV-SPI-003-2024",
+            "spiInvestmentID": "INV-x-003-2024",
             "investmentRequestTypeIdentifier": "1",
             "investmentName": "Výmena rozvodnej skrine",
             "municipality": "Bratislava",
             "expectedImplementationDate": "2024-01-01",
-            "technicalJustificationCode": "PP03/2024",
-            "planningGroup": "BA011",
-            "implementationDateJustification": "00014",
+            "technicalJustificationCode": "x03/2024",
+            "planningGroup": "xy011",
+            "implementationDateJustification": "xxx14",
             "estimatedInvestmentCosts": 1500,
             "processorID": "T200009",
-            "investmentReasonCode": "IR45",
+            "investmentReasonCode": "x45",
             "investmentReasonText": null,
             "currentStateDescription": "SCHVALENA",
             "proposedSolution": "Výmena rozvodnej skrine",
             "defectIDs": ["3"],
-            "investmentRequestStateIdentifier": "0001011"
+            "investmentRequestStateIdentifier": "x1011"
         },
         {
             "investmentRequestID": "7",
-            "spiInvestmentID": "",
+            "spiInvestmentID": "INV-x-008-2024",
             "investmentRequestTypeIdentifier": "1",
             "investmentName": "Výmena rozvodnej skrine",
             "municipality": "Bratislava",
             "expectedImplementationDate": "2024-01-01",
-            "technicalJustificationCode": "PP07/2024",
-            "planningGroup": "BA011",
-            "implementationDateJustification": "00014",
+            "technicalJustificationCode": "xx77/2024",
+            "planningGroup": "xy011",
+            "implementationDateJustification": "xxx14",
             "estimatedInvestmentCosts": 1500,
             "processorID": "T200009",
-            "investmentReasonCode": "IR45",
+            "investmentReasonCode": "x45",
             "investmentReasonText": null,
             "currentStateDescription": "NOVA",
             "proposedSolution": "Výmena rozvodnej skrine",
             "defectIDs": ["7"],
-            "investmentRequestStateIdentifier": "0001005"
+            "investmentRequestStateIdentifier": "x1005"
         }
     ],
     "investmentRequestTypes": [
@@ -146,864 +146,504 @@
     ],
     "investmentRequestStates": [
         {
-            "investmentRequestStateIdentifier": "0001005",
-            "investmentRequestStateName": "2 - Rozpracovaná IP [0001005]"
+            "investmentRequestStateIdentifier": "x1005",
+            "investmentRequestStateName": "2 - Rozpracovaná IP [x1005]"
         },
         {
-            "investmentRequestStateIdentifier": "0001010",
-            "investmentRequestStateName": "8 - IP schválená TK 3/3 [0001010]"
+            "investmentRequestStateIdentifier": "x1010",
+            "investmentRequestStateName": "8 - IP schválená TK 3/3 [x1010]"
         },
         {
-            "investmentRequestStateIdentifier": "0001011",
-            "investmentRequestStateName": "999 - IP zamietnutá [0001011]"
+            "investmentRequestStateIdentifier": "x1011",
+            "investmentRequestStateName": "999 - IP zamietnutá [x1011]"
         },
         {
-            "investmentRequestStateIdentifier": "0001442",
-            "investmentRequestStateName": "21 - Žiadosť o KN na Pripravu [0001442]"
+            "investmentRequestStateIdentifier": "x1442",
+            "investmentRequestStateName": "21 - Žiadosť o KN na Pripravu [x1442]"
         },
         {
-            "investmentRequestStateIdentifier": "0001124",
-            "investmentRequestStateName": "49 - Projektová príprava ukončená [0001124]"
+            "investmentRequestStateIdentifier": "x1124",
+            "investmentRequestStateName": "49 - Projektová príprava ukončená [x1124]"
         },
         {
-            "investmentRequestStateIdentifier": "0001225",
-            "investmentRequestStateName": "999 - Stavba zrušená [0001225]"
+            "investmentRequestStateIdentifier": "x1225",
+            "investmentRequestStateName": "999 - Stavba zrušená [x1225]"
         },
         {
-            "investmentRequestStateIdentifier": "0001155",
-            "investmentRequestStateName": "51 - Žiadosť o KN a realizáciu (MP) [0001155]"
+            "investmentRequestStateIdentifier": "x1155",
+            "investmentRequestStateName": "51 - Žiadosť o KN a realizáciu (MP) [x1155]"
         },
         {
-            "investmentRequestStateIdentifier": "0001466",
-            "investmentRequestStateName": "54.8 - Stavba pozastavená [0001466]"
+            "investmentRequestStateIdentifier": "x1466",
+            "investmentRequestStateName": "54.8 - Stavba pozastavená [x1466]"
         },
         {
-            "investmentRequestStateIdentifier": "0001166",
-            "investmentRequestStateName": "61 - Stavba v realizácií [0001166]"
+            "investmentRequestStateIdentifier": "x1166",
+            "investmentRequestStateName": "61 - Stavba v realizácií [x1166]"
         },
         {
-            "investmentRequestStateIdentifier": "0001168",
-            "investmentRequestStateName": "70 - Preberacie konanie ukončené (vyžaduje KR) [0001168]"
+            "investmentRequestStateIdentifier": "x1168",
+            "investmentRequestStateName": "70 - Preberacie konanie ukončené (vyžaduje KR) [x1168]"
         },
         {
-            "investmentRequestStateIdentifier": "0001182",
-            "investmentRequestStateName": "70 - Preberacie konanie ukončené (nevyžaduje KR) [0001182]"
+            "investmentRequestStateIdentifier": "x1182",
+            "investmentRequestStateName": "70 - Preberacie konanie ukončené (nevyžaduje KR) [x1182]"
         },
         {
-            "investmentRequestStateIdentifier": "0001159",
-            "investmentRequestStateName": "999 - Stavba zrušená [0001159]"
+            "investmentRequestStateIdentifier": "x1159",
+            "investmentRequestStateName": "999 - Stavba zrušená [x1159]"
         }
     ],
     "technicalObjects": [
         {
-            "technicalObjectID": "157394",
-            "technicalObjectName": "VVN_PODPERNY_BOD#157394",
+            "technicalObjectID": "y32601",
+            "technicalObjectName": "VVN_PODPERNY_BOD#y32601",
+            "technicalObjectTypeIdentifier": "VVN_PODPERNY_BOD",
+            "municipality": "Pezinok",
+            "gpsCoordinates": [48.267548, 17.273458],
+            "isCrucial": true,
+            "supervisor": "Jozef Kováč",
+            "constructionYear": 1995
+        },
+        {
+            "technicalObjectID": "y32600",
+            "technicalObjectName": "VVN_PODPERNY_BOD#y32600",
+            "technicalObjectTypeIdentifier": "VVN_PODPERNY_BOD",
+            "municipality": "Pezinok",
+            "gpsCoordinates": [48.263948, 17.267021],
+            "isCrucial": false,
+            "supervisor": "Jozef Kováč",
+            "constructionYear": 2011
+        },
+        {
+            "technicalObjectID": "y32599",
+            "technicalObjectName": "VVN_PODPERNY_BOD#y32599",
+            "technicalObjectTypeIdentifier": "VVN_PODPERNY_BOD",
+            "municipality": "Pezinok",
+            "gpsCoordinates": [48.263563, 17.263405],
+            "isCrucial": true,
+            "supervisor": "Jozef Kováč",
+            "constructionYear": 1990
+        },
+        {
+            "technicalObjectID": "y32598",
+            "technicalObjectName": "VVN_PODPERNY_BOD#y32598",
+            "technicalObjectTypeIdentifier": "VVN_PODPERNY_BOD",
+            "municipality": "Svätý Jur",
+            "gpsCoordinates": [48.245663, 17.218567],
+            "isCrucial": true,
+            "supervisor": "Jozef Kováč",
+            "constructionYear": 2003
+        },
+        {
+            "technicalObjectID": "y32592",
+            "technicalObjectName": "VVN_PODPERNY_BOD#y32592",
+            "technicalObjectTypeIdentifier": "VVN_PODPERNY_BOD",
+            "municipality": "Svätý Jur",
+            "gpsCoordinates": [48.240790, 17.211306],
+            "isCrucial": true,
+            "supervisor": "Jozef Kováč",
+            "constructionYear": 2002
+        },
+        {
+            "technicalObjectID": "y32594",
+            "technicalObjectName": "VVN_PODPERNY_BOD#y32594",
+            "technicalObjectTypeIdentifier": "VVN_PODPERNY_BOD",
+            "municipality": "Svätý Jur",
+            "gpsCoordinates": [48.243142, 17.214900],
+            "isCrucial": false,
+            "supervisor": "Jozef Kováč",
+            "constructionYear": 2008
+        },
+        {
+            "technicalObjectID": "x57394",
+            "technicalObjectName": "VVN_PODPERNY_BOD#x57394",
             "technicalObjectTypeIdentifier": "VVN_PODPERNY_BOD",
             "municipality": "Bratislava",
             "gpsCoordinates": [48.18225621459742, 17.1637209242971],
             "isCrucial": true,
-            "supervisor": "Vladimír Petráš",
+            "supervisor": "Martin Nový",
             "constructionYear": 2000
         },
         {
-            "technicalObjectID": "157296",
-            "technicalObjectName": "VVN_PODPERNY_BOD#157296",
+            "technicalObjectID": "x57296",
+            "technicalObjectName": "VVN_PODPERNY_BOD#x57296",
             "technicalObjectTypeIdentifier": "VVN_PODPERNY_BOD",
-            "municipality": "Pezinok",
+            "municipality": "Bratislava",
             "gpsCoordinates": [48.18215874751361, 17.16220661338653],
             "isCrucial": null,
-            "supervisor": "Vladimír Petráš",
+            "supervisor": "Martin Nový",
             "constructionYear": 2005
         },
         {
-            "technicalObjectID": "159058",
-            "technicalObjectName": "VVN_PODPERNY_BOD#159058",
+            "technicalObjectID": "x59058",
+            "technicalObjectName": "VVN_PODPERNY_BOD#x59058",
             "technicalObjectTypeIdentifier": "VVN_PODPERNY_BOD",
             "municipality": "Bratislava",
             "gpsCoordinates": [48.19487850200221, 17.147713121802276],
             "isCrucial": true,
-            "supervisor": "Vladimír Petráš",
+            "supervisor": "Martin Nový",
             "constructionYear": 2016
         },
         {
-            "technicalObjectID": "159059",
-            "technicalObjectName": "VVN_PODPERNY_BOD#159059",
+            "technicalObjectID": "x59059",
+            "technicalObjectName": "VVN_PODPERNY_BOD#x59059",
             "technicalObjectTypeIdentifier": "VVN_PODPERNY_BOD",
-            "municipality": "Pezinok",
+            "municipality": "Bratislava",
             "gpsCoordinates": [48.19661459852605, 17.14838103590027],
             "isCrucial": null,
-            "supervisor": "Vladimír Petráš",
+            "supervisor": "Martin Nový",
             "constructionYear": 2017
         },
         {
-            "technicalObjectID": "159060",
-            "technicalObjectName": "VVN_PODPERNY_BOD#159060",
+            "technicalObjectID": "x59060",
+            "technicalObjectName": "VVN_PODPERNY_BOD#x59060",
             "technicalObjectTypeIdentifier": "VVN_PODPERNY_BOD",
             "municipality": "Bratislava",
             "gpsCoordinates": [48.198234223799695, 17.149941370343683],
             "isCrucial": null,
-            "supervisor": "Vladimír Petráš",
+            "supervisor": "Martin Nový",
             "constructionYear": 2006
         },
         {
-            "technicalObjectID": "159061",
-            "technicalObjectName": "VVN_PODPERNY_BOD#159061",
+            "technicalObjectID": "x59061",
+            "technicalObjectName": "VVN_PODPERNY_BOD#x59061",
             "technicalObjectTypeIdentifier": "VVN_PODPERNY_BOD",
             "municipality": "Bratislava",
             "gpsCoordinates": [48.199619154866646, 17.151579433491698],
             "isCrucial": null,
-            "supervisor": "Vladimír Petráš",
+            "supervisor": "Martin Nový",
             "constructionYear": 2012
         },
         {
-            "technicalObjectID": "160737",
-            "technicalObjectName": "VVN_PODPERNY_BOD#160737",
+            "technicalObjectID": "x60737",
+            "technicalObjectName": "VVN_PODPERNY_BOD#x60737",
             "technicalObjectTypeIdentifier": "VVN_PODPERNY_BOD",
             "municipality": "Bratislava",
             "gpsCoordinates": [48.18449969550537, 17.162020136249712],
             "isCrucial": null,
-            "supervisor": "Vladimír Petráš",
+            "supervisor": "Martin Nový",
             "constructionYear": 2013
         },
         {
-            "technicalObjectID": "160738",
-            "technicalObjectName": "VVN_PODPERNY_BOD#160738",
+            "technicalObjectID": "x60738",
+            "technicalObjectName": "VVN_PODPERNY_BOD#x60738",
             "technicalObjectTypeIdentifier": "VVN_PODPERNY_BOD",
             "municipality": "Bratislava",
             "gpsCoordinates": [48.18638907984318, 17.1606328485261],
             "isCrucial": true,
-            "supervisor": "Vladimír Petráš",
+            "supervisor": "Martin Nový",
             "constructionYear": 2008
         },
         {
-            "technicalObjectID": "160739",
-            "technicalObjectName": "VVN_PODPERNY_BOD#160739",
+            "technicalObjectID": "x60739",
+            "technicalObjectName": "VVN_PODPERNY_BOD#x60739",
             "technicalObjectTypeIdentifier": "VVN_PODPERNY_BOD",
-            "municipality": "Pezinok",
+            "municipality": "Bratislava",
             "gpsCoordinates": [48.18747344555849, 17.158159517285856],
             "isCrucial": null,
-            "supervisor": "Vladimír Petráš",
+            "supervisor": "Martin Nový",
             "constructionYear": 2015
         },
         {
-            "technicalObjectID": "160741",
-            "technicalObjectName": "VVN_PODPERNY_BOD#160741",
+            "technicalObjectID": "x60741",
+            "technicalObjectName": "VVN_PODPERNY_BOD#x60741",
             "technicalObjectTypeIdentifier": "VVN_PODPERNY_BOD",
             "municipality": "Bratislava",
             "gpsCoordinates": [48.18956060247301, 17.154339464998106],
             "isCrucial": null,
-            "supervisor": "Vladimír Petráš",
+            "supervisor": "Martin Nový",
             "constructionYear": 2019
         },
         {
-            "technicalObjectID": "160742",
-            "technicalObjectName": "VVN_PODPERNY_BOD#160742",
+            "technicalObjectID": "x60742",
+            "technicalObjectName": "VVN_PODPERNY_BOD#x60742",
             "technicalObjectTypeIdentifier": "VVN_PODPERNY_BOD",
             "municipality": "Bratislava",
             "gpsCoordinates": [48.18929007047223, 17.15125257264557],
             "isCrucial": null,
-            "supervisor": "Vladimír Petráš",
+            "supervisor": "Martin Nový",
             "constructionYear": 2005
         },
         {
-            "technicalObjectID": "157449",
-            "technicalObjectName": "VVN_PODPERNY_BOD#157449",
+            "technicalObjectID": "x57449",
+            "technicalObjectName": "VVN_PODPERNY_BOD#x57449",
             "technicalObjectTypeIdentifier": "VVN_PODPERNY_BOD",
             "municipality": "Bratislava",
             "gpsCoordinates": [48.18971394180768, 17.152113612056183],
             "isCrucial": null,
-            "supervisor": "Vladimír Petráš",
+            "supervisor": "Martin Nový",
             "constructionYear": 2016
         },
         {
-            "technicalObjectID": "159064",
-            "technicalObjectName": "VVN_PODPERNY_BOD#159064",
+            "technicalObjectID": "x59064",
+            "technicalObjectName": "VVN_PODPERNY_BOD#x59064",
             "technicalObjectTypeIdentifier": "VVN_PODPERNY_BOD",
             "municipality": "Bratislava",
             "gpsCoordinates": [48.20182582985331, 17.15899866800982],
             "isCrucial": null,
-            "supervisor": "Vladimír Petráš",
+            "supervisor": "Martin Nový",
             "constructionYear": 2024
         },
         {
-            "technicalObjectID": "159065",
-            "technicalObjectName": "VVN_PODPERNY_BOD#159065",
+            "technicalObjectID": "x59065",
+            "technicalObjectName": "VVN_PODPERNY_BOD#x59065",
             "technicalObjectTypeIdentifier": "VVN_PODPERNY_BOD",
             "municipality": "Bratislava",
             "gpsCoordinates": [48.2026313811599, 17.162178319673185],
             "isCrucial": null,
-            "supervisor": "Vladimír Petráš",
+            "supervisor": "Martin Nový",
             "constructionYear": 2004
         },
         {
-            "technicalObjectID": "159066",
-            "technicalObjectName": "VVN_PODPERNY_BOD#159066",
+            "technicalObjectID": "x59066",
+            "technicalObjectName": "VVN_PODPERNY_BOD#x59066",
             "technicalObjectTypeIdentifier": "VVN_PODPERNY_BOD",
             "municipality": "Bratislava",
             "gpsCoordinates": [48.203281877518215, 17.165875066774067],
             "isCrucial": null,
-            "supervisor": "Vladimír Petráš",
+            "supervisor": "Martin Nový",
             "constructionYear": 2005
         },
         {
-            "technicalObjectID": "159069",
-            "technicalObjectName": "VVN_PODPERNY_BOD#159069",
+            "technicalObjectID": "x59069",
+            "technicalObjectName": "VVN_PODPERNY_BOD#x59069",
             "technicalObjectTypeIdentifier": "VVN_PODPERNY_BOD",
             "municipality": "Bratislava",
             "gpsCoordinates": [48.20599278284475, 17.175300803205094],
             "isCrucial": null,
-            "supervisor": "Vladimír Petráš",
+            "supervisor": "Martin Nový",
             "constructionYear": 2011
         },
         {
-            "technicalObjectID": "159070",
-            "technicalObjectName": "VVN_PODPERNY_BOD#159070",
+            "technicalObjectID": "x59070",
+            "technicalObjectName": "VVN_PODPERNY_BOD#x59070",
             "technicalObjectTypeIdentifier": "VVN_PODPERNY_BOD",
-            "municipality": "Pezinok",
+            "municipality": "Bratislava",
             "gpsCoordinates": [48.206959175854735, 17.177146992100138],
             "isCrucial": null,
-            "supervisor": "Vladimír Petráš",
+            "supervisor": "Martin Nový",
             "constructionYear": 2001
         },
         {
-            "technicalObjectID": "159071",
-            "technicalObjectName": "VVN_PODPERNY_BOD#159071",
+            "technicalObjectID": "x59071",
+            "technicalObjectName": "VVN_PODPERNY_BOD#x59071",
             "technicalObjectTypeIdentifier": "VVN_PODPERNY_BOD",
             "municipality": "Bratislava",
             "gpsCoordinates": [48.20792955783424, 17.178998989217337],
             "isCrucial": null,
-            "supervisor": "Vladimír Petráš",
+            "supervisor": "Martin Nový",
             "constructionYear": 2003
         },
         {
-            "technicalObjectID": "159072",
-            "technicalObjectName": "VVN_PODPERNY_BOD#159072",
+            "technicalObjectID": "x59072",
+            "technicalObjectName": "VVN_PODPERNY_BOD#x59072",
             "technicalObjectTypeIdentifier": "VVN_PODPERNY_BOD",
             "municipality": "Bratislava",
             "gpsCoordinates": [48.208891979133185, 17.180846015178147],
             "isCrucial": null,
-            "supervisor": "Vladimír Petráš",
+            "supervisor": "Martin Nový",
             "constructionYear": 2005
         },
         {
-            "technicalObjectID": "159074",
-            "technicalObjectName": "VVN_PODPERNY_BOD#159074",
+            "technicalObjectID": "x59074",
+            "technicalObjectName": "VVN_PODPERNY_BOD#x59074",
             "technicalObjectTypeIdentifier": "VVN_PODPERNY_BOD",
             "municipality": "Bratislava",
             "gpsCoordinates": [48.21172685621357, 17.184622288321727],
             "isCrucial": null,
-            "supervisor": "Vladimír Petráš",
+            "supervisor": "Martin Nový",
             "constructionYear": 2018
         },
         {
-            "technicalObjectID": "159075",
-            "technicalObjectName": "VVN_PODPERNY_BOD#159075",
+            "technicalObjectID": "x59075",
+            "technicalObjectName": "VVN_PODPERNY_BOD#x59075",
             "technicalObjectTypeIdentifier": "VVN_PODPERNY_BOD",
             "municipality": "Bratislava",
             "gpsCoordinates": [48.213750123347516, 17.186709404012788],
             "isCrucial": null,
-            "supervisor": "Vladimír Petráš",
+            "supervisor": "Martin Nový",
             "constructionYear": 1999
         },
         {
-            "technicalObjectID": "159076",
-            "technicalObjectName": "VVN_PODPERNY_BOD#159076",
+            "technicalObjectID": "x59076",
+            "technicalObjectName": "VVN_PODPERNY_BOD#x59076",
             "technicalObjectTypeIdentifier": "VVN_PODPERNY_BOD",
             "municipality": "Bratislava",
             "gpsCoordinates": [48.2137040263101, 17.189089756503307],
             "isCrucial": null,
-            "supervisor": "Vladimír Petráš",
+            "supervisor": "Martin Nový",
             "constructionYear": 1997
         },
         {
-            "technicalObjectID": "157297",
-            "technicalObjectName": "VVN_PODPERNY_BOD#157297",
+            "technicalObjectID": "x57297",
+            "technicalObjectName": "VVN_PODPERNY_BOD#x57297",
             "technicalObjectTypeIdentifier": "VVN_PODPERNY_BOD",
             "municipality": "Bratislava",
             "gpsCoordinates": [48.182600834274716, 17.16348564745041],
             "isCrucial": true,
-            "supervisor": "Vladimír Petráš",
+            "supervisor": "Martin Nový",
             "constructionYear": 2012
         },
         {
-            "technicalObjectID": "157443",
-            "technicalObjectName": "VVN_PODPERNY_BOD#157443",
+            "technicalObjectID": "x57443",
+            "technicalObjectName": "VVN_PODPERNY_BOD#x57443",
             "technicalObjectTypeIdentifier": "VVN_PODPERNY_BOD",
             "municipality": "Bratislava",
             "gpsCoordinates": [48.18255762280511, 17.163693654000735],
             "isCrucial": null,
-            "supervisor": "Vladimír Petráš",
+            "supervisor": "Martin Nový",
             "constructionYear": 2024
         },
         {
-            "technicalObjectID": "157444",
-            "technicalObjectName": "VVN_PODPERNY_BOD#157444",
+            "technicalObjectID": "x57444",
+            "technicalObjectName": "VVN_PODPERNY_BOD#x57444",
             "technicalObjectTypeIdentifier": "VVN_PODPERNY_BOD",
             "municipality": "Bratislava",
             "gpsCoordinates": [48.18456169202407, 17.1622213819621],
             "isCrucial": null,
-            "supervisor": "Vladimír Petráš",
+            "supervisor": "Martin Nový",
             "constructionYear": 2008
         },
         {
-            "technicalObjectID": "157445",
-            "technicalObjectName": "VVN_PODPERNY_BOD#157445",
+            "technicalObjectID": "x57445",
+            "technicalObjectName": "VVN_PODPERNY_BOD#x57445",
             "technicalObjectTypeIdentifier": "VVN_PODPERNY_BOD",
             "municipality": "Bratislava",
             "gpsCoordinates": [48.18644045077782, 17.160840025762667],
             "isCrucial": null,
-            "supervisor": "Vladimír Petráš",
+            "supervisor": "Martin Nový",
             "constructionYear": 2019
         },
         {
-            "technicalObjectID": "157457",
-            "technicalObjectName": "VVN_PODPERNY_BOD#157457",
+            "technicalObjectID": "x57457",
+            "technicalObjectName": "VVN_PODPERNY_BOD#x57457",
             "technicalObjectTypeIdentifier": "VVN_PODPERNY_BOD",
             "municipality": "Bratislava",
             "gpsCoordinates": [48.19486920343375, 17.147201490930975],
             "isCrucial": null,
-            "supervisor": "Vladimír Petráš",
+            "supervisor": "Martin Nový",
             "constructionYear": 2017
         },
         {
-            "technicalObjectID": "157458",
-            "technicalObjectName": "VVN_PODPERNY_BOD#157458",
+            "technicalObjectID": "x57458",
+            "technicalObjectName": "VVN_PODPERNY_BOD#x57458",
             "technicalObjectTypeIdentifier": "VVN_PODPERNY_BOD",
             "municipality": "Bratislava",
             "gpsCoordinates": [48.195287601860315, 17.146712277061024],
             "isCrucial": null,
-            "supervisor": "Vladimír Petráš",
+            "supervisor": "Martin Nový",
             "constructionYear": 1995
         },
         {
-            "technicalObjectID": "176998",
-            "technicalObjectName": "VVN_PODPERNY_BOD#176998",
+            "technicalObjectID": "x76998",
+            "technicalObjectName": "VVN_PODPERNY_BOD#x76998",
             "technicalObjectTypeIdentifier": "VVN_PODPERNY_BOD",
             "municipality": "Bratislava",
             "gpsCoordinates": [48.19520814162354, 17.14662503683156],
             "isCrucial": null,
-            "supervisor": "Vladimír Petráš",
+            "supervisor": "Martin Nový",
             "constructionYear": 2021
         },
         {
-            "technicalObjectID": "159062",
-            "technicalObjectName": "VVN_PODPERNY_BOD#159062",
+            "technicalObjectID": "x59062",
+            "technicalObjectName": "VVN_PODPERNY_BOD#x59062",
             "technicalObjectTypeIdentifier": "VVN_PODPERNY_BOD",
             "municipality": "Bratislava",
             "gpsCoordinates": [48.201397941729994, 17.153212615390675],
             "isCrucial": null,
-            "supervisor": "Vladimír Petráš",
+            "supervisor": "Martin Nový",
             "constructionYear": 2001
         },
         {
-            "technicalObjectID": "159063",
-            "technicalObjectName": "VVN_PODPERNY_BOD#159063",
+            "technicalObjectID": "x59063",
+            "technicalObjectName": "VVN_PODPERNY_BOD#x59063",
             "technicalObjectTypeIdentifier": "VVN_PODPERNY_BOD",
             "municipality": "Bratislava",
             "gpsCoordinates": [48.201200802333375, 17.15640283405238],
             "isCrucial": null,
-            "supervisor": "Vladimír Petráš",
+            "supervisor": "Martin Nový",
             "constructionYear": 2000
         },
         {
-            "technicalObjectID": "159067",
-            "technicalObjectName": "VVN_PODPERNY_BOD#159067",
+            "technicalObjectID": "x59067",
+            "technicalObjectName": "VVN_PODPERNY_BOD#x59067",
             "technicalObjectTypeIdentifier": "VVN_PODPERNY_BOD",
             "municipality": "Bratislava",
             "gpsCoordinates": [48.20418232859743, 17.169975827028388],
             "isCrucial": null,
-            "supervisor": "Vladimír Petráš",
+            "supervisor": "Martin Nový",
             "constructionYear": 2022
         },
         {
-            "technicalObjectID": "159068",
-            "technicalObjectName": "VVN_PODPERNY_BOD#159068",
+            "technicalObjectID": "x59068",
+            "technicalObjectName": "VVN_PODPERNY_BOD#x59068",
             "technicalObjectTypeIdentifier": "VVN_PODPERNY_BOD",
             "municipality": "Bratislava",
             "gpsCoordinates": [48.20490649030349, 17.17322185235114],
             "isCrucial": null,
-            "supervisor": "Vladimír Petráš",
+            "supervisor": "Martin Nový",
             "constructionYear": 2004
         },
         {
-            "technicalObjectID": "160740",
-            "technicalObjectName": "VVN_PODPERNY_BOD#160740",
+            "technicalObjectID": "x60740",
+            "technicalObjectName": "VVN_PODPERNY_BOD#x60740",
             "technicalObjectTypeIdentifier": "VVN_PODPERNY_BOD",
             "municipality": "Bratislava",
             "gpsCoordinates": [48.18873576349196, 17.155288206642552],
             "isCrucial": null,
-            "supervisor": "Vladimír Petráš",
+            "supervisor": "Martin Nový",
             "constructionYear": 2017
         },
         {
-            "technicalObjectID": "159073",
-            "technicalObjectName": "VVN_PODPERNY_BOD#159073",
+            "technicalObjectID": "x59073",
+            "technicalObjectName": "VVN_PODPERNY_BOD#x59073",
             "technicalObjectTypeIdentifier": "VVN_PODPERNY_BOD",
             "municipality": "Bratislava",
             "gpsCoordinates": [48.20986558845508, 17.182702825497252],
             "isCrucial": true,
-            "supervisor": "Vladimír Petráš",
+            "supervisor": "Martin Nový",
             "constructionYear": 2013
         },
         {
-            "technicalObjectID": "157446",
-            "technicalObjectName": "VVN_PODPERNY_BOD#157446",
+            "technicalObjectID": "x57446",
+            "technicalObjectName": "VVN_PODPERNY_BOD#x57446",
             "technicalObjectTypeIdentifier": "VVN_PODPERNY_BOD",
             "municipality": "Bratislava",
             "gpsCoordinates": [48.18782097184174, 17.159825317968462],
             "isCrucial": null,
-            "supervisor": "Vladimír Petráš",
+            "supervisor": "Martin Nový",
             "constructionYear": 2016
         },
         {
-            "technicalObjectID": "157447",
-            "technicalObjectName": "VVN_PODPERNY_BOD#157447",
+            "technicalObjectID": "x57447",
+            "technicalObjectName": "VVN_PODPERNY_BOD#x57447",
             "technicalObjectTypeIdentifier": "VVN_PODPERNY_BOD",
             "municipality": "Bratislava",
             "gpsCoordinates": [48.188776422712316, 17.158145478756538],
             "isCrucial": null,
-            "supervisor": "Vladimír Petráš",
+            "supervisor": "Martin Nový",
             "constructionYear": 2018
         },
         {
-            "technicalObjectID": "157448",
-            "technicalObjectName": "VVN_PODPERNY_BOD#157448",
+            "technicalObjectID": "x57448",
+            "technicalObjectName": "VVN_PODPERNY_BOD#x57448",
             "technicalObjectTypeIdentifier": "VVN_PODPERNY_BOD",
             "municipality": "Bratislava",
             "gpsCoordinates": [48.18997000842537, 17.156021390644575],
             "isCrucial": null,
-            "supervisor": "Vladimír Petráš",
+            "supervisor": "Martin Nový",
             "constructionYear": 2005
         },
         {
-            "technicalObjectID": "160743",
-            "technicalObjectName": "VVN_PODPERNY_BOD#160743",
+            "technicalObjectID": "x60743",
+            "technicalObjectName": "VVN_PODPERNY_BOD#x60743",
             "technicalObjectTypeIdentifier": "VVN_PODPERNY_BOD",
             "municipality": "Bratislava",
             "gpsCoordinates": [48.189094676995644, 17.14903043410505],
             "isCrucial": null,
-            "supervisor": "Vladimír Petráš",
+            "supervisor": "Martin Nový",
             "constructionYear": 1996
-        },
-        {
-            "technicalObjectID": "167003",
-            "technicalObjectName": "VVN_POLE#167003",
-            "technicalObjectTypeIdentifier": "VVN_POLE",
-            "municipality": "Bratislava",
-            "gpsCoordinates": [null, null],
-            "isCrucial": null,
-            "supervisor": "Vladimír Petráš",
-            "constructionYear": 1995
-        },
-        {
-            "technicalObjectID": "163579",
-            "technicalObjectName": "VVN_POLE#163579",
-            "technicalObjectTypeIdentifier": "VVN_POLE",
-            "municipality": "Bratislava",
-            "gpsCoordinates": [null, null],
-            "isCrucial": null,
-            "supervisor": "Vladimír Petráš",
-            "constructionYear": 2010
-        },
-        {
-            "technicalObjectID": "167005",
-            "technicalObjectName": "VVN_POLE#167005",
-            "technicalObjectTypeIdentifier": "VVN_POLE",
-            "municipality": "Bratislava",
-            "gpsCoordinates": [null, null],
-            "isCrucial": null,
-            "supervisor": "Vladimír Petráš",
-            "constructionYear": 2011
-        },
-        {
-            "technicalObjectID": "167004",
-            "technicalObjectName": "VVN_POLE#167004",
-            "technicalObjectTypeIdentifier": "VVN_POLE",
-            "municipality": "Bratislava",
-            "gpsCoordinates": [null, null],
-            "isCrucial": null,
-            "supervisor": "Vladimír Petráš",
-            "constructionYear": 2023
-        },
-        {
-            "technicalObjectID": "163580",
-            "technicalObjectName": "VVN_POLE#163580",
-            "technicalObjectTypeIdentifier": "VVN_POLE",
-            "municipality": "Bratislava",
-            "gpsCoordinates": [null, null],
-            "isCrucial": null,
-            "supervisor": "Vladimír Petráš",
-            "constructionYear": 2004
-        },
-        {
-            "technicalObjectID": "163626",
-            "technicalObjectName": "VVN_POLE#163626",
-            "technicalObjectTypeIdentifier": "VVN_POLE",
-            "municipality": "Bratislava",
-            "gpsCoordinates": [null, null],
-            "isCrucial": null,
-            "supervisor": "Vladimír Petráš",
-            "constructionYear": 2015
-        },
-        {
-            "technicalObjectID": "163627",
-            "technicalObjectName": "VVN_POLE#163627",
-            "technicalObjectTypeIdentifier": "VVN_POLE",
-            "municipality": "Bratislava",
-            "gpsCoordinates": [null, null],
-            "isCrucial": null,
-            "supervisor": "Vladimír Petráš",
-            "constructionYear": 2013
-        },
-        {
-            "technicalObjectID": "163680",
-            "technicalObjectName": "VVN_POLE#163680",
-            "technicalObjectTypeIdentifier": "VVN_POLE",
-            "municipality": "Bratislava",
-            "gpsCoordinates": [null, null],
-            "isCrucial": null,
-            "supervisor": "Vladimír Petráš",
-            "constructionYear": 2008
-        },
-        {
-            "technicalObjectID": "163681",
-            "technicalObjectName": "VVN_POLE#163681",
-            "technicalObjectTypeIdentifier": "VVN_POLE",
-            "municipality": "Bratislava",
-            "gpsCoordinates": [null, null],
-            "isCrucial": null,
-            "supervisor": "Vladimír Petráš",
-            "constructionYear": 2021
-        },
-        {
-            "technicalObjectID": "163682",
-            "technicalObjectName": "VVN_POLE#163682",
-            "technicalObjectTypeIdentifier": "VVN_POLE",
-            "municipality": "Bratislava",
-            "gpsCoordinates": [null, null],
-            "isCrucial": null,
-            "supervisor": "Vladimír Petráš",
-            "constructionYear": 2023
-        },
-        {
-            "technicalObjectID": "163683",
-            "technicalObjectName": "VVN_POLE#163683",
-            "technicalObjectTypeIdentifier": "VVN_POLE",
-            "municipality": "Bratislava",
-            "gpsCoordinates": [null, null],
-            "isCrucial": null,
-            "supervisor": "Vladimír Petráš",
-            "constructionYear": 2016
-        },
-        {
-            "technicalObjectID": "163684",
-            "technicalObjectName": "VVN_POLE#163684",
-            "technicalObjectTypeIdentifier": "VVN_POLE",
-            "municipality": "Bratislava",
-            "gpsCoordinates": [null, null],
-            "isCrucial": null,
-            "supervisor": "Vladimír Petráš",
-            "constructionYear": 2018
-        },
-        {
-            "technicalObjectID": "163685",
-            "technicalObjectName": "VVN_POLE#163685",
-            "technicalObjectTypeIdentifier": "VVN_POLE",
-            "municipality": "Bratislava",
-            "gpsCoordinates": [null, null],
-            "isCrucial": null,
-            "supervisor": "Vladimír Petráš",
-            "constructionYear": 2006
-        },
-        {
-            "technicalObjectID": "163686",
-            "technicalObjectName": "VVN_POLE#163686",
-            "technicalObjectTypeIdentifier": "VVN_POLE",
-            "municipality": "Bratislava",
-            "gpsCoordinates": [null, null],
-            "isCrucial": null,
-            "supervisor": "Vladimír Petráš",
-            "constructionYear": 1998
-        },
-        {
-            "technicalObjectID": "163687",
-            "technicalObjectName": "VVN_POLE#163687",
-            "technicalObjectTypeIdentifier": "VVN_POLE",
-            "municipality": "Bratislava",
-            "gpsCoordinates": [null, null],
-            "isCrucial": null,
-            "supervisor": "Vladimír Petráš",
-            "constructionYear": 2006
-        },
-        {
-            "technicalObjectID": "163739",
-            "technicalObjectName": "VVN_POLE#163739",
-            "technicalObjectTypeIdentifier": "VVN_POLE",
-            "municipality": "Bratislava",
-            "gpsCoordinates": [null, null],
-            "isCrucial": null,
-            "supervisor": "Vladimír Petráš",
-            "constructionYear": 2017
-        },
-        {
-            "technicalObjectID": "163740",
-            "technicalObjectName": "VVN_POLE#163740",
-            "technicalObjectTypeIdentifier": "VVN_POLE",
-            "municipality": "Bratislava",
-            "gpsCoordinates": [null, null],
-            "isCrucial": null,
-            "supervisor": "Vladimír Petráš",
-            "constructionYear": 1996
-        },
-        {
-            "technicalObjectID": "165337",
-            "technicalObjectName": "VVN_POLE#165337",
-            "technicalObjectTypeIdentifier": "VVN_POLE",
-            "municipality": "Bratislava",
-            "gpsCoordinates": [null, null],
-            "isCrucial": null,
-            "supervisor": "Vladimír Petráš",
-            "constructionYear": 1997
-        },
-        {
-            "technicalObjectID": "165338",
-            "technicalObjectName": "VVN_POLE#165338",
-            "technicalObjectTypeIdentifier": "VVN_POLE",
-            "municipality": "Bratislava",
-            "gpsCoordinates": [null, null],
-            "isCrucial": null,
-            "supervisor": "Vladimír Petráš",
-            "constructionYear": 2009
-        },
-        {
-            "technicalObjectID": "165339",
-            "technicalObjectName": "VVN_POLE#165339",
-            "technicalObjectTypeIdentifier": "VVN_POLE",
-            "municipality": "Bratislava",
-            "gpsCoordinates": [null, null],
-            "isCrucial": null,
-            "supervisor": "Vladimír Petráš",
-            "constructionYear": 1998
-        },
-        {
-            "technicalObjectID": "165340",
-            "technicalObjectName": "VVN_POLE#165340",
-            "technicalObjectTypeIdentifier": "VVN_POLE",
-            "municipality": "Bratislava",
-            "gpsCoordinates": [null, null],
-            "isCrucial": null,
-            "supervisor": "Vladimír Petráš",
-            "constructionYear": 2000
-        },
-        {
-            "technicalObjectID": "165341",
-            "technicalObjectName": "VVN_POLE#165341",
-            "technicalObjectTypeIdentifier": "VVN_POLE",
-            "municipality": "Bratislava",
-            "gpsCoordinates": [null, null],
-            "isCrucial": null,
-            "supervisor": "Vladimír Petráš",
-            "constructionYear": 2000
-        },
-        {
-            "technicalObjectID": "165342",
-            "technicalObjectName": "VVN_POLE#165342",
-            "technicalObjectTypeIdentifier": "VVN_POLE",
-            "municipality": "Bratislava",
-            "gpsCoordinates": [null, null],
-            "isCrucial": null,
-            "supervisor": "Vladimír Petráš",
-            "constructionYear": 2008
-        },
-        {
-            "technicalObjectID": "165343",
-            "technicalObjectName": "VVN_POLE#165343",
-            "technicalObjectTypeIdentifier": "VVN_POLE",
-            "municipality": "Bratislava",
-            "gpsCoordinates": [null, null],
-            "isCrucial": null,
-            "supervisor": "Vladimír Petráš",
-            "constructionYear": 2021
-        },
-        {
-            "technicalObjectID": "165344",
-            "technicalObjectName": "VVN_POLE#165344",
-            "technicalObjectTypeIdentifier": "VVN_POLE",
-            "municipality": "Bratislava",
-            "gpsCoordinates": [null, null],
-            "isCrucial": null,
-            "supervisor": "Vladimír Petráš",
-            "constructionYear": 2016
-        },
-        {
-            "technicalObjectID": "165345",
-            "technicalObjectName": "VVN_POLE#165345",
-            "technicalObjectTypeIdentifier": "VVN_POLE",
-            "municipality": "Bratislava",
-            "gpsCoordinates": [null, null],
-            "isCrucial": null,
-            "supervisor": "Vladimír Petráš",
-            "constructionYear": 2024
-        },
-        {
-            "technicalObjectID": "165346",
-            "technicalObjectName": "VVN_POLE#165346",
-            "technicalObjectTypeIdentifier": "VVN_POLE",
-            "municipality": "Bratislava",
-            "gpsCoordinates": [null, null],
-            "isCrucial": null,
-            "supervisor": "Vladimír Petráš",
-            "constructionYear": 2010
-        },
-        {
-            "technicalObjectID": "165347",
-            "technicalObjectName": "VVN_POLE#165347",
-            "technicalObjectTypeIdentifier": "VVN_POLE",
-            "municipality": "Bratislava",
-            "gpsCoordinates": [null, null],
-            "isCrucial": null,
-            "supervisor": "Vladimír Petráš",
-            "constructionYear": 2014
-        },
-        {
-            "technicalObjectID": "165348",
-            "technicalObjectName": "VVN_POLE#165348",
-            "technicalObjectTypeIdentifier": "VVN_POLE",
-            "municipality": "Bratislava",
-            "gpsCoordinates": [null, null],
-            "isCrucial": null,
-            "supervisor": "Vladimír Petráš",
-            "constructionYear": 2021
-        },
-        {
-            "technicalObjectID": "165349",
-            "technicalObjectName": "VVN_POLE#165349",
-            "technicalObjectTypeIdentifier": "VVN_POLE",
-            "municipality": "Bratislava",
-            "gpsCoordinates": [null, null],
-            "isCrucial": null,
-            "supervisor": "Vladimír Petráš",
-            "constructionYear": 2013
-        },
-        {
-            "technicalObjectID": "165350",
-            "technicalObjectName": "VVN_POLE#165350",
-            "technicalObjectTypeIdentifier": "VVN_POLE",
-            "municipality": "Bratislava",
-            "gpsCoordinates": [null, null],
-            "isCrucial": null,
-            "supervisor": "Vladimír Petráš",
-            "constructionYear": 2011
-        },
-        {
-            "technicalObjectID": "165351",
-            "technicalObjectName": "VVN_POLE#165351",
-            "technicalObjectTypeIdentifier": "VVN_POLE",
-            "municipality": "Bratislava",
-            "gpsCoordinates": [null, null],
-            "isCrucial": null,
-            "supervisor": "Vladimír Petráš",
-            "constructionYear": 2016
-        },
-        {
-            "technicalObjectID": "165352",
-            "technicalObjectName": "VVN_POLE#165352",
-            "technicalObjectTypeIdentifier": "VVN_POLE",
-            "municipality": "Bratislava",
-            "gpsCoordinates": [null, null],
-            "isCrucial": null,
-            "supervisor": "Vladimír Petráš",
-            "constructionYear": 2002
-        },
-        {
-            "technicalObjectID": "165353",
-            "technicalObjectName": "VVN_POLE#165353",
-            "technicalObjectTypeIdentifier": "VVN_POLE",
-            "municipality": "Bratislava",
-            "gpsCoordinates": [null, null],
-            "isCrucial": null,
-            "supervisor": "Vladimír Petráš",
-            "constructionYear": 2020
-        },
-        {
-            "technicalObjectID": "165354",
-            "technicalObjectName": "VVN_POLE#165354",
-            "technicalObjectTypeIdentifier": "VVN_POLE",
-            "municipality": "Bratislava",
-            "gpsCoordinates": [null, null],
-            "isCrucial": null,
-            "supervisor": "Vladimír Petráš",
-            "constructionYear": 2023
-        },
-        {
-            "technicalObjectID": "165355",
-            "technicalObjectName": "VVN_POLE#165355",
-            "technicalObjectTypeIdentifier": "VVN_POLE",
-            "municipality": "Bratislava",
-            "gpsCoordinates": [null, null],
-            "isCrucial": null,
-            "supervisor": "Vladimír Petráš",
-            "constructionYear": 2003
-        },
-        {
-            "technicalObjectID": "165356",
-            "technicalObjectName": "VVN_POLE#165356",
-            "technicalObjectTypeIdentifier": "VVN_POLE",
-            "municipality": "Bratislava",
-            "gpsCoordinates": [null, null],
-            "isCrucial": null,
-            "supervisor": "Vladimír Petráš",
-            "constructionYear": 2006
-        },
-        {
-            "technicalObjectID": "166998",
-            "technicalObjectName": "VVN_POLE#166998",
-            "technicalObjectTypeIdentifier": "VVN_POLE",
-            "municipality": "Bratislava",
-            "gpsCoordinates": [null, null],
-            "isCrucial": null,
-            "supervisor": "Vladimír Petráš",
-            "constructionYear": 2010
-        },
-        {
-            "technicalObjectID": "166999",
-            "technicalObjectName": "VVN_POLE#166999",
-            "technicalObjectTypeIdentifier": "VVN_POLE",
-            "municipality": "Bratislava",
-            "gpsCoordinates": [null, null],
-            "isCrucial": null,
-            "supervisor": "Vladimír Petráš",
-            "constructionYear": 1995
-        },
-        {
-            "technicalObjectID": "167000",
-            "technicalObjectName": "VVN_POLE#167000",
-            "technicalObjectTypeIdentifier": "VVN_POLE",
-            "municipality": "Bratislava",
-            "gpsCoordinates": [null, null],
-            "isCrucial": null,
-            "supervisor": "Vladimír Petráš",
-            "constructionYear": 2006
-        },
-        {
-            "technicalObjectID": "167001",
-            "technicalObjectName": "VVN_POLE#167001",
-            "technicalObjectTypeIdentifier": "VVN_POLE",
-            "municipality": "Bratislava",
-            "gpsCoordinates": [null, null],
-            "isCrucial": null,
-            "supervisor": "Vladimír Petráš",
-            "constructionYear": 2009
-        },
-        {
-            "technicalObjectID": "167002",
-            "technicalObjectName": "VVN_POLE#167002",
-            "technicalObjectTypeIdentifier": "VVN_POLE",
-            "municipality": "Bratislava",
-            "gpsCoordinates": [null, null],
-            "isCrucial": null,
-            "supervisor": "Vladimír Petráš",
-            "constructionYear": 2000
         }
     ],
     "technicalObjectTypes": [
@@ -1107,10 +747,64 @@
     ],
     "defects": [
         {
+            "defectID": "72",
+            "defectTypeIdentifier": "155",
+            "technicalObjectID": "y32601",
+            "createdDTime": "2024-11-02T10:15:34",
+            "defectState": "NOVY",
+            "description": null,
+            "isPersistent": true
+        },
+        {
+            "defectID": "70",
+            "defectTypeIdentifier": "155",
+            "technicalObjectID": "y32600",
+            "createdDTime": "2024-11-02T08:44:00",
+            "defectState": "NOVY",
+            "description": null,
+            "isPersistent": true
+        },
+        {
+            "defectID": "69",
+            "defectTypeIdentifier": "155",
+            "technicalObjectID": "y32599",
+            "createdDTime": "2024-11-02T07:21:01",
+            "defectState": "NOVY",
+            "description": null,
+            "isPersistent": false
+        },
+        {
+            "defectID": "67",
+            "defectTypeIdentifier": "155",
+            "technicalObjectID": "y32598",
+            "createdDTime": "2024-10-19T13:27:44",
+            "defectState": "NOVY",
+            "description": null,
+            "isPersistent": true
+        },
+        {
+            "defectID": "65",
+            "defectTypeIdentifier": "155",
+            "technicalObjectID": "y32594",
+            "createdDTime": "2024-10-19T09:23:17",
+            "defectState": "NOVY",
+            "description": null,
+            "isPersistent": false
+        },
+        {
+            "defectID": "64",
+            "defectTypeIdentifier": "155",
+            "technicalObjectID": "y32592",
+            "createdDTime": "2024-10-19T07:48:10",
+            "defectState": "NOVY",
+            "description": null,
+            "isPersistent": false
+        },
+        {
             "defectID": "42",
             "defectTypeIdentifier": "155",
-            "technicalObjectID": "157296",
-            "createdDTime": "2024-04-19T05:36:00",
+            "technicalObjectID": "x57296",
+            "createdDTime": "2024-04-19T05:48:00",
             "defectState": "NOVY",
             "description": null,
             "isPersistent": false
@@ -1118,8 +812,8 @@
         {
             "defectID": "9",
             "defectTypeIdentifier": "28",
-            "technicalObjectID": "157296",
-            "createdDTime": "2024-04-19T05:36:00",
+            "technicalObjectID": "x57296",
+            "createdDTime": "2024-04-19T05:36:45",
             "defectState": "NOVY",
             "description": null,
             "isPersistent": true
@@ -1127,8 +821,8 @@
         {
             "defectID": "30",
             "defectTypeIdentifier": "2",
-            "technicalObjectID": "157297",
-            "createdDTime": "2024-04-19T05:37:00",
+            "technicalObjectID": "x57297",
+            "createdDTime": "2024-04-19T05:37:10",
             "defectState": "NOVY",
             "description": null,
             "isPersistent": true
@@ -1136,7 +830,7 @@
         {
             "defectID": "41",
             "defectTypeIdentifier": "28",
-            "technicalObjectID": "157394",
+            "technicalObjectID": "x57394",
             "createdDTime": "2024-04-19T07:14:00",
             "defectState": "NOVY",
             "description": null,
@@ -1145,7 +839,7 @@
         {
             "defectID": "31",
             "defectTypeIdentifier": "2",
-            "technicalObjectID": "157443",
+            "technicalObjectID": "x57443",
             "createdDTime": "2024-04-19T08:03:00",
             "defectState": "NOVY",
             "description": null,
@@ -1154,7 +848,7 @@
         {
             "defectID": "32",
             "defectTypeIdentifier": "155",
-            "technicalObjectID": "157444",
+            "technicalObjectID": "x57444",
             "createdDTime": "2024-04-19T08:04:00",
             "defectState": "NOVY",
             "description": null,
@@ -1163,8 +857,8 @@
         {
             "defectID": "33",
             "defectTypeIdentifier": "28",
-            "technicalObjectID": "157445",
-            "createdDTime": "2024-04-19T08:05:00",
+            "technicalObjectID": "x57445",
+            "createdDTime": "2024-04-18T09:45:00",
             "defectState": "NOVY",
             "description": null,
             "isPersistent": false
@@ -1172,8 +866,8 @@
         {
             "defectID": "19",
             "defectTypeIdentifier": "28",
-            "technicalObjectID": "157449",
-            "createdDTime": "2024-04-19T08:09:00",
+            "technicalObjectID": "x57449",
+            "createdDTime": "2024-04-18T08:09:00",
             "defectState": "NOVY",
             "description": null,
             "isPersistent": false
@@ -1181,7 +875,7 @@
         {
             "defectID": "34",
             "defectTypeIdentifier": "28",
-            "technicalObjectID": "157457",
+            "technicalObjectID": "x57457",
             "createdDTime": "2024-04-19T08:17:00",
             "defectState": "NOVY",
             "description": null,
@@ -1190,7 +884,7 @@
         {
             "defectID": "35",
             "defectTypeIdentifier": "28",
-            "technicalObjectID": "157458",
+            "technicalObjectID": "x57458",
             "createdDTime": "2024-04-19T08:18:00",
             "defectState": "NOVY",
             "description": null,
@@ -1199,7 +893,7 @@
         {
             "defectID": "10",
             "defectTypeIdentifier": "28",
-            "technicalObjectID": "159058",
+            "technicalObjectID": "x59058",
             "createdDTime": "2024-04-20T10:58:00",
             "defectState": "NOVY",
             "description": null,
@@ -1208,7 +902,7 @@
         {
             "defectID": "11",
             "defectTypeIdentifier": "28",
-            "technicalObjectID": "159059",
+            "technicalObjectID": "x59059",
             "createdDTime": "2024-04-20T10:59:00",
             "defectState": "NOVY",
             "description": null,
@@ -1217,7 +911,7 @@
         {
             "defectID": "12",
             "defectTypeIdentifier": "2",
-            "technicalObjectID": "159060",
+            "technicalObjectID": "x59060",
             "createdDTime": "2024-04-20T11:00:00",
             "defectState": "NOVY",
             "description": null,
@@ -1226,7 +920,7 @@
         {
             "defectID": "13",
             "defectTypeIdentifier": "155",
-            "technicalObjectID": "159061",
+            "technicalObjectID": "x59061",
             "createdDTime": "2024-04-20T11:01:00",
             "defectState": "NOVY",
             "description": null,
@@ -1235,7 +929,7 @@
         {
             "defectID": "37",
             "defectTypeIdentifier": "34",
-            "technicalObjectID": "159062",
+            "technicalObjectID": "x59062",
             "createdDTime": "2024-04-20T11:02:00",
             "defectState": "NOVY",
             "description": null,
@@ -1244,7 +938,7 @@
         {
             "defectID": "38",
             "defectTypeIdentifier": "28",
-            "technicalObjectID": "159063",
+            "technicalObjectID": "x59063",
             "createdDTime": "2024-04-20T11:03:00",
             "defectState": "NOVY",
             "description": null,
@@ -1253,7 +947,7 @@
         {
             "defectID": "20",
             "defectTypeIdentifier": "106",
-            "technicalObjectID": "159064",
+            "technicalObjectID": "x59064",
             "createdDTime": "2024-04-20T11:04:00",
             "defectState": "NOVY",
             "description": null,
@@ -1262,7 +956,7 @@
         {
             "defectID": "21",
             "defectTypeIdentifier": "155",
-            "technicalObjectID": "159065",
+            "technicalObjectID": "x59065",
             "createdDTime": "2024-04-20T11:05:00",
             "defectState": "NOVY",
             "description": null,
@@ -1271,7 +965,7 @@
         {
             "defectID": "22",
             "defectTypeIdentifier": "34",
-            "technicalObjectID": "159066",
+            "technicalObjectID": "x59066",
             "createdDTime": "2024-04-20T11:06:00",
             "defectState": "NOVY",
             "description": null,
@@ -1280,7 +974,7 @@
         {
             "defectID": "39",
             "defectTypeIdentifier": "28",
-            "technicalObjectID": "159067",
+            "technicalObjectID": "x59067",
             "createdDTime": "2024-04-20T11:07:00",
             "defectState": "NOVY",
             "description": null,
@@ -1289,7 +983,7 @@
         {
             "defectID": "40",
             "defectTypeIdentifier": "28",
-            "technicalObjectID": "159068",
+            "technicalObjectID": "x59068",
             "createdDTime": "2024-04-20T11:08:00",
             "defectState": "NOVY",
             "description": null,
@@ -1298,7 +992,7 @@
         {
             "defectID": "23",
             "defectTypeIdentifier": "28",
-            "technicalObjectID": "159069",
+            "technicalObjectID": "x59069",
             "createdDTime": "2024-04-20T11:09:00",
             "defectState": "NOVY",
             "description": null,
@@ -1307,7 +1001,7 @@
         {
             "defectID": "24",
             "defectTypeIdentifier": "28",
-            "technicalObjectID": "159070",
+            "technicalObjectID": "x59070",
             "createdDTime": "2024-04-20T11:10:00",
             "defectState": "NOVY",
             "description": null,
@@ -1316,7 +1010,7 @@
         {
             "defectID": "25",
             "defectTypeIdentifier": "34",
-            "technicalObjectID": "159071",
+            "technicalObjectID": "x59071",
             "createdDTime": "2024-04-20T11:11:00",
             "defectState": "NOVY",
             "description": null,
@@ -1325,7 +1019,7 @@
         {
             "defectID": "26",
             "defectTypeIdentifier": "106",
-            "technicalObjectID": "159072",
+            "technicalObjectID": "x59072",
             "createdDTime": "2024-04-20T11:12:00",
             "defectState": "NOVY",
             "description": null,
@@ -1334,7 +1028,7 @@
         {
             "defectID": "27",
             "defectTypeIdentifier": "28",
-            "technicalObjectID": "159074",
+            "technicalObjectID": "x59074",
             "createdDTime": "2024-04-20T11:14:00",
             "defectState": "NOVY",
             "description": null,
@@ -1343,7 +1037,7 @@
         {
             "defectID": "28",
             "defectTypeIdentifier": "106",
-            "technicalObjectID": "159075",
+            "technicalObjectID": "x59075",
             "createdDTime": "2024-04-20T11:15:00",
             "defectState": "NOVY",
             "description": null,
@@ -1352,7 +1046,7 @@
         {
             "defectID": "29",
             "defectTypeIdentifier": "39",
-            "technicalObjectID": "159076",
+            "technicalObjectID": "x59076",
             "createdDTime": "2024-04-20T11:16:00",
             "defectState": "NOVY",
             "description": null,
@@ -1361,7 +1055,7 @@
         {
             "defectID": "14",
             "defectTypeIdentifier": "28",
-            "technicalObjectID": "160737",
+            "technicalObjectID": "x60737",
             "createdDTime": "2024-04-21T14:57:00",
             "defectState": "NOVY",
             "description": null,
@@ -1370,7 +1064,7 @@
         {
             "defectID": "15",
             "defectTypeIdentifier": "28",
-            "technicalObjectID": "160738",
+            "technicalObjectID": "x60738",
             "createdDTime": "2024-04-21T14:58:00",
             "defectState": "NOVY",
             "description": null,
@@ -1379,7 +1073,7 @@
         {
             "defectID": "16",
             "defectTypeIdentifier": "28",
-            "technicalObjectID": "160739",
+            "technicalObjectID": "x60739",
             "createdDTime": "2024-04-21T14:59:00",
             "defectState": "NOVY",
             "description": null,
@@ -1388,7 +1082,7 @@
         {
             "defectID": "17",
             "defectTypeIdentifier": "28",
-            "technicalObjectID": "160741",
+            "technicalObjectID": "x60741",
             "createdDTime": "2024-04-21T15:01:00",
             "defectState": "NOVY",
             "description": null,
@@ -1397,7 +1091,7 @@
         {
             "defectID": "18",
             "defectTypeIdentifier": "39",
-            "technicalObjectID": "160742",
+            "technicalObjectID": "x60742",
             "createdDTime": "2024-04-21T15:02:00",
             "defectState": "NOVY",
             "description": null,
@@ -1406,71 +1100,8 @@
         {
             "defectID": "36",
             "defectTypeIdentifier": "28",
-            "technicalObjectID": "176998",
+            "technicalObjectID": "x76998",
             "createdDTime": "2024-05-02T21:58:00",
-            "defectState": "NOVY",
-            "description": null,
-            "isPersistent": false
-        },
-        {
-            "defectID": "4",
-            "defectTypeIdentifier": "0",
-            "technicalObjectID": "2377564",
-            "createdDTime": "2024-05-20T00:00:00",
-            "defectState": "NOVY",
-            "description": null,
-            "isPersistent": false
-        },
-        {
-            "defectID": "3",
-            "defectTypeIdentifier": "0",
-            "technicalObjectID": "2377563",
-            "createdDTime": "2024-05-20T00:00:00",
-            "defectState": "NOVY",
-            "description": null,
-            "isPersistent": false
-        },
-        {
-            "defectID": "2",
-            "defectTypeIdentifier": "0",
-            "technicalObjectID": "2377562",
-            "createdDTime": "2024-05-20T00:00:00",
-            "defectState": "NOVY",
-            "description": null,
-            "isPersistent": false
-        },
-        {
-            "defectID": "1",
-            "defectTypeIdentifier": "0",
-            "technicalObjectID": "2377561",
-            "createdDTime": "2024-05-20T00:00:00",
-            "defectState": "VYRIESENY",
-            "description": null,
-            "isPersistent": false
-        },
-        {
-            "defectID": "6",
-            "defectTypeIdentifier": "0",
-            "technicalObjectID": "2377566",
-            "createdDTime": "2024-05-20T00:00:00",
-            "defectState": "NOVY",
-            "description": null,
-            "isPersistent": false
-        },
-        {
-            "defectID": "5",
-            "defectTypeIdentifier": "0",
-            "technicalObjectID": "2377565",
-            "createdDTime": "2024-05-20T00:00:00",
-            "defectState": "NOVY",
-            "description": null,
-            "isPersistent": false
-        },
-        {
-            "defectID": "7",
-            "defectTypeIdentifier": "0",
-            "technicalObjectID": "2377567",
-            "createdDTime": "2024-05-20T00:00:00",
             "defectState": "NOVY",
             "description": null,
             "isPersistent": false
@@ -2007,7 +1638,7 @@
         },
         {
             "defectTypeIdentifier": "108",
-            "defectTypeName": "KZL/ZL/SOK - armatúra – poškodená ",
+            "defectTypeName": "KZL/ZL/SOK - armatúra - poškodená ",
             "defaultSeverityLevel": 3,
             "voltageLevelIdentifier": "VVN"
         },

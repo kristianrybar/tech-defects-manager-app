@@ -1,19 +1,19 @@
-import { useInvestmentRequestsStore } from '../_stores/useInvestmentRequestsStore'
+import { TInvestmentRequest } from '../_types/TInvestmentRequest'
 import InvestmentRequest from './investmentRequest/InvestmentRequest'
-import css from './InvestmentRequests.module.css'
+// import css from './InvestmentRequests.module.css'
 
+type Props = {
+  investmentRequests: TInvestmentRequest[]
+}
 
-const InvestmentRequests = () => {
-  const { investmentRequests } = useInvestmentRequestsStore()
-  console.log(investmentRequests)
-  
+const InvestmentRequests = (props: Props) => {
   return (
     <>
-      {investmentRequests.length > 0 && 
+      {props.investmentRequests.length > 0 && 
         <div>
           Investments
           {
-            investmentRequests.map((investmentRequest) => 
+            props.investmentRequests.map((investmentRequest) => 
               <InvestmentRequest
                 key={investmentRequest.investmentRequestID}
                 investmentRequest={investmentRequest}
