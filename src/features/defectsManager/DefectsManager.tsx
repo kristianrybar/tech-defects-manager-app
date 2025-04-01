@@ -17,6 +17,7 @@ import Defects from './defects/Defects'
 import DefectDetail from './defectDetail/DefectDetail'
 import DisplayControlBar from './displayControlBar/DisplayControlBar'
 import FilterControlBar from './filterControlBar/FilterControlBar'
+import PageWrapper from '~/app_shared/pageWrapper/PageWrapper'
 import css from './DefectsManager.module.css'
 
 
@@ -73,75 +74,76 @@ const PageDefectsManager = () => {
   
   return (
     <>
-      <div className={css.defectsManagerContainer}>
-        {mode == 'list' && defects.length > 0 &&
-          <>
-            <div className={css.filterControlSideBarWrapper}>
-              <FilterControlSideBar
-                filters={filters}
-                onCheckbox={(optionIndex, filterName) => set_filters(toggleOffOnFilterOption(filterName, optionIndex))}
-                onResetFilters={() => set_filters(resetAllFilters())}
-              />
-            </div>
-            
-            <div className={css.defectsWrapper}>
-              <DisplayControlBar
-                onOpenForm={() => {
-                  !selectedDefects.length
-                    ? alert('Nie su vybrané žiadne nedostatky')
-                    : set_isOpenFormModal(true)
-                }}
-                listMode={listMode}
-                onClickTable={() => set_listMode('table')}
-                onClickMap={() => set_listMode('map')}
-                countSelectedDefects={selectedDefects.length}
-              />
+      <PageWrapper>
+        
+          {mode == 'list' && defects.length > 0 &&
+            <>
+              <div className={css.filterControlSideBarWrapper}>
+                <FilterControlSideBar
+                  filters={filters}
+                  onCheckbox={(optionIndex, filterName) => set_filters(toggleOffOnFilterOption(filterName, optionIndex))}
+                  onResetFilters={() => set_filters(resetAllFilters())}
+                />
+              </div>
+              
+              <div className={css.defectsWrapper}>
+                <DisplayControlBar
+                  onOpenForm={() => {
+                    !selectedDefects.length
+                      ? alert('Nie su vybrané žiadne nedostatky')
+                      : set_isOpenFormModal(true)
+                  }}
+                  listMode={listMode}
+                  onClickTable={() => set_listMode('table')}
+                  onClickMap={() => set_listMode('map')}
+                  countSelectedDefects={selectedDefects.length}
+                />
 
-              <FilterControlBar
-                // date from/to
-                onSelectStartDate={(e) => selectDateQuery_withValidation(e, 'startDate')}
-                onSelectEndDate={(e) => selectDateQuery_withValidation(e, 'endDate')}
-                // searchbar
-                onSearchQuery={(e) => set_searchQuery(e.target.value)}
-                searchQuery={searchQuery}
-                // dropdown
-                onChangeDropdown={(e) => set_dropdownQuery(e.value)}
-                dropdownQuery={dropdownQuery}
-                dropdownOptions={['Najnovšie', 'Najstaršie']}
-                onClearOption={() => set_dropdownQuery('')}
-              />
+                <FilterControlBar
+                  // date from/to
+                  onSelectStartDate={(e) => selectDateQuery_withValidation(e, 'startDate')}
+                  onSelectEndDate={(e) => selectDateQuery_withValidation(e, 'endDate')}
+                  // searchbar
+                  onSearchQuery={(e) => set_searchQuery(e.target.value)}
+                  searchQuery={searchQuery}
+                  // dropdown
+                  onChangeDropdown={(e) => set_dropdownQuery(e.value)}
+                  dropdownQuery={dropdownQuery}
+                  dropdownOptions={['Najnovšie', 'Najstaršie']}
+                  onClearOption={() => set_dropdownQuery('')}
+                />
 
-              <Defects
-                listMode={listMode}
-                filteredDefects={filteredDefects}
-                onOpenDetail={(defectID) => openDefectDetail_andCreateUrlSearchParams(defectID)}
+                <Defects
+                  listMode={listMode}
+                  filteredDefects={filteredDefects}
+                  onOpenDetail={(defectID) => openDefectDetail_andCreateUrlSearchParams(defectID)}
+                  onSelectDefect={(checked, d) => {
+                    checked
+                      ? selectDefect(d)
+                      : deselectDefect(d.defectID)
+                  }}
+                  isDefectChecked={(defectID) => isDefectChecked(defectID, selectedDefects)}
+                  searchQuery={searchQuery}
+                />
+              </div>
+            </>
+          }
+          
+          {mode == 'detail' && defects.length > 0 &&
+            <div className={css.defectDetailWrapper}>
+              <DefectDetail
+                onGoBack={openDefectsList_andClearUrlSearchParams}
+                defects={defects}
+                isDefectChecked={(defectID) => isDefectChecked(defectID, selectedDefects)}
                 onSelectDefect={(checked, d) => {
                   checked
                     ? selectDefect(d)
                     : deselectDefect(d.defectID)
                 }}
-                isDefectChecked={(defectID) => isDefectChecked(defectID, selectedDefects)}
-                searchQuery={searchQuery}
               />
             </div>
-          </>
-        }
-        
-        {mode == 'detail' && defects.length > 0 &&
-          <div className={css.defectDetailWrapper}>
-            <DefectDetail
-              onGoBack={openDefectsList_andClearUrlSearchParams}
-              defects={defects}
-              isDefectChecked={(defectID) => isDefectChecked(defectID, selectedDefects)}
-              onSelectDefect={(checked, d) => {
-                checked
-                  ? selectDefect(d)
-                  : deselectDefect(d.defectID)
-              }}
-            />
-          </div>
-        }
-      </div>
+          }
+      </PageWrapper>
 
       {isOpenFormModal &&
         <FormInvestmentRequest_modal

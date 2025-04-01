@@ -1,0 +1,3 @@
+.pageWrapper {
+  @apply w-full grow flex gap-4 rounded-xl justify-center items-center mt-4 p-4 bg-[--color1];
+}

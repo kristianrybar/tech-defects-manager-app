@@ -1,16 +1,13 @@
-.defectsManagerContainer {
-    /* @apply w-full grow max-w-[1500px] mx-auto relative bg-[--color1] p-4 flex gap-4 rounded-xl mt-4; */
-    @apply w-full grow flex gap-4 rounded-xl p-4 bg-[--color1] mt-4; 
 
-    .filterControlSideBarWrapper {
-        @apply w-2/12 p-3 bg-[--bg-lighter] rounded-lg border border-[--color4] h-fit;
-    }
-    .defectsWrapper {
-        @apply w-10/12;
-    }
-    .defectDetailWrapper {
-        @apply w-full;
-    }
+.filterControlSideBarWrapper {
+    @apply w-2/12 p-3 bg-[--bg-lighter] rounded-lg border border-[--color4] h-fit self-start;
 }
+.defectsWrapper {
+    @apply w-10/12;
+}
+.defectDetailWrapper {
+    @apply w-full;
+}
+
 
 
