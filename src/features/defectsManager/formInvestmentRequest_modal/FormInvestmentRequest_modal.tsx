@@ -11,6 +11,7 @@ import UiButton from '~/app_shared/ui_button/UiButton'
 import UiInput from '~/app_shared/ui_input/UiInput'
 import UiDropdown from '~/app_shared/ui_dropdown/UiDropdown'
 import css from './FormInvestmentRequest_modal.module.css'
+import { sleep } from '~/zzz_react/sleep/sleep'
 
 type Props = {
   onClose: () => void
@@ -74,7 +75,7 @@ const FormInvestmentRequest_modal = (props: Props) => {
     }
     set_errors(result.newErrors)
 
-    await new Promise(resolve => setTimeout(resolve, 1000)) // mock loading delay
+    await sleep() // mock loading delay
     const resp = await createInvestmentRequest(formData)
     if (resp.error) {
       set_errorAPI(resp.error)

@@ -1,4 +1,4 @@
-import { TFilter } from '../_types/TFilter'
+import { TFilter } from '../../_types/TFilter'
 import FilterGroup from './filterGroup/FilterGroup'
 import css from './FilterControlSideBar.module.css'
 

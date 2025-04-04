@@ -1,0 +1,31 @@
+.defectDetail {
+  @apply flex flex-col h-full w-full bg-[--color1] px-5;
+
+  .header {
+    @apply relative flex items-center justify-between border-b border-[--color4] mb-2 pb-2;
+
+    .title {
+      @apply text-xl font-medium absolute left-1/2 -translate-x-[50%] bg-[--color1] px-2;
+    }
+
+    .goBack {
+      @apply flex items-center gap-2 text-lg leading-[0.8] cursor-pointer py-2 w-max;
+
+      svg {
+        @apply text-lg;
+      }
+    }
+  }
+
+  .content {
+    @apply flex gap-5;
+
+    h3 {
+      @apply text-lg font-medium;
+    }
+  }
+
+  .map {
+    @apply h-full mt-3;
+  }
+}

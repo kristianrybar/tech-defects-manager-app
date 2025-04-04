@@ -53,8 +53,7 @@ const useDefectsFiltering = (
   }, [searchQuery, dropdownQuery, dateFilter, defects, filters])
   
   return {
-    filteredDefects,
-    filterDefects
+    filteredDefects
   }
 }
 

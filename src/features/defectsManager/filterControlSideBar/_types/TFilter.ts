@@ -1,4 +1,4 @@
-import { TFilterOption } from '../filterControlSideBar/_types/TFilterOption'
+import { TFilterOption } from './TFilterOption'
 
 export type TFilter = {
     filterName: string
