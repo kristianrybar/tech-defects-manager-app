@@ -3,11 +3,12 @@ import { useNavigate, useParams } from 'react-router-dom'
 import { FaArrowLeftLong } from "react-icons/fa6"
 import { TDefect } from '~/defectsManager/_types/TDefect'
 import { useDefectsStore } from '~/defectsManager/_stores/useDefectsStore'
+import { useSelectedDefectsStore } from '~/defectsManager/_stores/useSelectedDefectsStore'
+import { isDefectChecked } from '~/defectsManager/_utils/isDefectChecked'
+import { routes } from '~/app_router/routes/routes'
+import PageWrapper from '~/app_shared/pageWrapper/PageWrapper'
 import Map from '~/app_shared/map/Map'
 import css from './DefectDetail.module.css'
-import PageWrapper from '~/app_shared/pageWrapper/PageWrapper'
-import { isDefectChecked } from '~/defectsManager/_utils/isDefectChecked'
-import { useSelectedDefectsStore } from '~/defectsManager/_stores/useSelectedDefectsStore'
 
 const DefectDetail = () => {
   const selectedDefects = useSelectedDefectsStore(s => s.selectedDefects)
@@ -38,7 +39,7 @@ const DefectDetail = () => {
         <div className={css.header}>
           <div 
             className={css.goBack}
-            onClick={() => navigate('/tech-defects-manager')}
+            onClick={() => navigate(routes.techDefectsManager.path)}
           >
             <FaArrowLeftLong />
             <span>Späť</span>

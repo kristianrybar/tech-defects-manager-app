@@ -19,9 +19,10 @@ import DisplayControlBar from './displayControlBar/DisplayControlBar'
 import FilterControlBar from './filterControlBar/FilterControlBar'
 import PageWrapper from '~/app_shared/pageWrapper/PageWrapper'
 import css from './DefectsManager.module.css'
+import { routes } from '~/app_router/routes/routes'
 
 
-const PageDefectsManager = () => {
+const DefectsManager = () => {
   const selectedDefects = useSelectedDefectsStore(s => s.selectedDefects)
   const selectDefect = useSelectedDefectsStore(s => s.selectDefect)
   const deselectDefect = useSelectedDefectsStore(s => s.deselectDefect) 
@@ -94,7 +95,7 @@ const PageDefectsManager = () => {
                 <Defects
                   listMode={listMode}
                   filteredDefects={filteredDefects}
-                  onOpenDetail={(defectID) => navigate(`/tech-defect/${defectID}`)}
+                  onOpenDetail={(defectID) => navigate(routes.techDefect.path(defectID))}
                   onSelectDefect={(checked, d) => {
                     checked
                       ? selectDefect(d)
@@ -124,4 +125,4 @@ const PageDefectsManager = () => {
   )
 }
 
-export default PageDefectsManager
+export default DefectsManager

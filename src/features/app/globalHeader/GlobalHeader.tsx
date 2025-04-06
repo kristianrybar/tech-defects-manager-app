@@ -1,4 +1,5 @@
 import { useLocation, useNavigate } from 'react-router-dom'
+import { routes } from '~/app_router/routes/routes'
 import css from './GlobalHeader.module.css'
 
 const GlobalHeader = () => {
@@ -17,17 +18,17 @@ const GlobalHeader = () => {
         <div className={css.pageLinks}>
           <div
             className={`
-              ${location.pathname === '/tech-defects-manager' && css.active}
+              ${location.pathname === routes.techDefectsManager.path && css.active}
             `}
-            onClick={() => navigate('/tech-defects-manager')}
+            onClick={() => navigate(routes.techDefectsManager.path)}
           >
             Technické nedostatky
           </div>
           <span>|</span>
           <div
-            onClick={() => navigate('/investment-requests-manager')}
+            onClick={() => navigate(routes.investmentRequestsManager.path)}
             className={`
-              ${location.pathname === '/investment-requests-manager' && css.active}
+              ${location.pathname === routes.investmentRequestsManager.path && css.active}
             `}
           >
             Investičné požiadavky
