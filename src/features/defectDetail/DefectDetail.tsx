@@ -6,8 +6,14 @@ import { useDefectsStore } from '~/defectsManager/_stores/useDefectsStore'
 import Map from '~/app_shared/map/Map'
 import css from './DefectDetail.module.css'
 import PageWrapper from '~/app_shared/pageWrapper/PageWrapper'
+import { isDefectChecked } from '~/defectsManager/_utils/isDefectChecked'
+import { useSelectedDefectsStore } from '~/defectsManager/_stores/useSelectedDefectsStore'
 
 const DefectDetail = () => {
+  const selectedDefects = useSelectedDefectsStore(s => s.selectedDefects)
+  const selectDefect = useSelectedDefectsStore(s => s.selectDefect)
+  const deselectDefect = useSelectedDefectsStore(s => s.deselectDefect)
+   
   const { defects } = useDefectsStore()
   const [findedDefect, set_findedDefect] = useState<TDefect>()
   const { url_id } = useParams()
@@ -80,12 +86,16 @@ const DefectDetail = () => {
             </div>
 
             <div className={css.map}>
-              {/* <Map
+              <Map
                 zoom={14}
                 defects={[findedDefect]}
-                isDefectChecked={(defectID) => props.isDefectChecked(defectID)}
-                onCheckbox={(e, d: TDefect) => props.onSelectDefect(e.target.checked, d)}
-              /> */}
+                isDefectChecked={(defectID) => isDefectChecked(defectID, selectedDefects)}
+                onSelectDefect={(e, d) => {
+                  e.target.checked
+                    ? selectDefect(d)
+                    : deselectDefect(d.defectID)
+                }}
+              />
             </div>
           </>
         }

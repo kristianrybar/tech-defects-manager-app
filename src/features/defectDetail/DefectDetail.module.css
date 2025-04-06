@@ -26,6 +26,7 @@
   }
 
   .map {
-    @apply h-full mt-3;
+    @apply mt-2 pb-3 rounded;
+    height: calc(100dvh - 350px);
   }
 }

@@ -49,9 +49,8 @@ const Defects = (props: Props) => {
       {props.listMode == 'map' &&
         <div className={css.defectsMap}>
           <Map
-            zoom={14}
             defects={props.filteredDefects.filter(d => d.defectTypeIdentifier > '0')}
-            onCheckbox={(e, d: TDefect) => props.onSelectDefect(e.target.checked, d)}
+            onSelectDefect={(e, d: TDefect) => props.onSelectDefect(e.target.checked, d)}
             isDefectChecked={(defectID) => props.isDefectChecked(defectID)}
           />
         </div>

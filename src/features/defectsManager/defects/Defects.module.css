@@ -44,7 +44,7 @@
     
     .defectsMap {
         @apply mt-2 pb-3 rounded;
-        height: calc(100dvh - 156px);
+        height: calc(100dvh - 210px);
     }
     
     hr {

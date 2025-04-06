@@ -6,7 +6,7 @@ import css from './FilterControlSideBar.module.css'
 type Props = {
     filters: TFilter[]
     onCheckbox: (index, filterName) => void
-    onResetFilters: () => void
+    onTurnOffAllFilters: () => void
 }
 
 const FilterControlSideBar = (props: Props) => {
@@ -14,7 +14,7 @@ const FilterControlSideBar = (props: Props) => {
         <>  
             <div 
                 className={css.resetFilters}
-                onClick={props.onResetFilters}
+                onClick={props.onTurnOffAllFilters}
             >
                 Zrušiť vybrané parametre
             </div>

@@ -4,7 +4,7 @@ export const prepareEnumsForInvestmentForm = (defects: TDefect[], investmentRequ
     if (!defects.length || !investmentRequests.length) {
         return
     }
-    console.log(investmentRequests)
+    
     const municipalities: string[] = _findUniqueValues(defects, 'technicalObject.municipality') as string[]
     if (!municipalities) {
         return
@@ -33,7 +33,7 @@ export const prepareEnumsForInvestmentForm = (defects: TDefect[], investmentRequ
     }
 }
 
-export const _findUniqueValues = (array, key) => {
+const _findUniqueValues = (array, key) => {
     if (!array.length || !key) {
         return []
     }

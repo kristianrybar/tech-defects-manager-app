@@ -13,17 +13,20 @@ const FitBounds = (props: Props) => {
     const finalCoords: LatLngBoundsLiteral = props.defects.map((d) => [d.technicalObject?.gpsCoordinates?.[0], d.technicalObject?.gpsCoordinates?.[1]])
     
     useEffect(() => {
-        if (!props.defects.length) 
-            return
-        if (!finalCoords) 
-            return
-        
+        if (!props.defects.length) {
+           return 
+        }
+        if (!finalCoords) {
+           return 
+        }
+            
         const bounds = new LatLngBounds(finalCoords)
-        if (!bounds) 
+        if (!bounds) {
             return
+        } 
         
         map.fitBounds(bounds)
-    }, [props.defects, map])
+    }, [])
 
     return null
 }

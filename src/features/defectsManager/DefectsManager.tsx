@@ -1,13 +1,13 @@
 import { useEffect, useState } from 'react'
-import { createSearchParams, useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import { sleep } from '~/zzz_react/sleep/sleep'
-import { resetAllFilters } from './_utils/resetAllFilters'
+import { turnOffAllFilters } from './_utils/turnOffAllFilters'
 import { toggleOffOnFilterOption } from './_utils/toggleOffOnFilterOption'
 import { updateFiltersOptionsCountDefects } from './_utils/updateFiltersOptionsCountDefects'
 import { isDefectChecked } from './_utils/isDefectChecked'
 import { useDefectsStore } from './_stores/useDefectsStore'
 import { usePreventBodyScroll } from '~/zzz_react/preventBodyScroll/usePreventBodyScroll'
-import useDefectsSelecting from './_hooks/useDefectsSelecting'
+import { useSelectedDefectsStore } from './_stores/useSelectedDefectsStore'
 import useFormEnums from './_hooks/useFormEnums'
 import useDefectsFiltering from './defects/_hooks/useDefectsFiltering'
 import useFilterControlBar from './filterControlBar/_hooks/useFilterControlBar'
@@ -22,14 +22,18 @@ import css from './DefectsManager.module.css'
 
 
 const PageDefectsManager = () => {
+  const selectedDefects = useSelectedDefectsStore(s => s.selectedDefects)
+  const selectDefect = useSelectedDefectsStore(s => s.selectDefect)
+  const deselectDefect = useSelectedDefectsStore(s => s.deselectDefect) 
+
   const [listMode, set_listMode] = useState<'table' | 'map'>('table')
 
   const [isOpenFormModal, set_isOpenFormModal] = useState<boolean>(false)
   const { defects } = useDefectsStore()
   
-  const { searchQuery, set_searchQuery, dropdownQuery, set_dropdownQuery, 
-    dateQuery, selectDateQuery_withValidation } = useFilterControlBar()
-  const { selectedDefects, selectDefect, deselectDefect } = useDefectsSelecting()
+  const { searchQuery, set_searchQuery, dropdownQuery,
+    set_dropdownQuery, dateQuery, selectDateQuery_withValidation } = useFilterControlBar()
+
   const { formEnums } = useFormEnums()
   const { filters, set_filters } = useFilters(defects)
   const { filteredDefects } = useDefectsFiltering(defects, filters, searchQuery, dropdownQuery, dateQuery)
@@ -56,7 +60,7 @@ const PageDefectsManager = () => {
                 <FilterControlSideBar
                   filters={filters}
                   onCheckbox={(optionIndex, filterName) => set_filters(toggleOffOnFilterOption(filterName, optionIndex))}
-                  onResetFilters={() => set_filters(resetAllFilters())}
+                  onTurnOffAllFilters={() => set_filters(turnOffAllFilters())}
                 />
               </div>
               
@@ -102,21 +106,6 @@ const PageDefectsManager = () => {
               </div>
             </>
           }
-          
-          {/* {mode == 'detail' && defects.length > 0 &&
-            <div className={css.defectDetailWrapper}>
-              <DefectDetail
-                onGoBack={openDefectsList_andClearUrlSearchParams}
-                defects={defects}
-                isDefectChecked={(defectID) => isDefectChecked(defectID, selectedDefects)}
-                onSelectDefect={(checked, d) => {
-                  checked
-                    ? selectDefect(d)
-                    : deselectDefect(d.defectID)
-                }}
-              />
-            </div>
-          } */}
       </PageWrapper>
 
       {isOpenFormModal &&
