@@ -50,8 +50,8 @@ const DefectDetail = () => {
         </div>
         {!d
           ? <div>Defect not found. Something very wrong.</div>
-          : <>
-            <div className={css.content}>
+          : <div className={css.content}>
+            <div className={css.defectInfo}>
               <div>
                 <h3>Nedostatok</h3>
                 <div>ID: {d.defectID}</div>
@@ -98,7 +98,7 @@ const DefectDetail = () => {
                 }}
               />
             </div>
-          </>
+          </div>
         }
       </div>
     </PageWrapper>
