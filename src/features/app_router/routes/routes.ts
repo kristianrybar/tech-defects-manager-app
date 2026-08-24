@@ -1,12 +1,12 @@
 import DefectDetail from "~/defectDetail/DefectDetail"
-import DefectsManager from "~/defectsManager/DefectsManager"
+import DefectsPage from "~/defects/DefectsPage"
 import InvestmentRequestsManager from "~/investmentRequestsManager/InvestmentRequestsManager"
 
 
 const _techDefectsRoute = {
   path: '/tech-defects',
   title: 'Technické nedostatky',
-  element: DefectsManager,
+  element: DefectsPage,
 }
 
 const _techDefectRoute = {

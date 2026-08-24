@@ -15,7 +15,7 @@ type Props = {
     error?: string 
     showIcon?: boolean
     disabled?: boolean
-    onClearOption?: () => any
+    onClearOption?: () => void
     width?: string
 }
 
