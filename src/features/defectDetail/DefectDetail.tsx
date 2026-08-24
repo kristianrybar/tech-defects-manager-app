@@ -10,6 +10,7 @@ import PageWrapper from '~/app_shared/pageWrapper/PageWrapper'
 import Map from '~/app_shared/map/Map'
 import css from './DefectDetail.module.css'
 
+
 const DefectDetail = () => {
   const selectedDefects = useSelectedDefectsStore(s => s.selectedDefects)
   const selectDefect = useSelectedDefectsStore(s => s.selectDefect)
@@ -39,7 +40,7 @@ const DefectDetail = () => {
         <div className={css.header}>
           <div 
             className={css.goBack}
-            onClick={() => navigate(routes.techDefectsManager.path)}
+            onClick={() => navigate(routes.techDefects.path)}
           >
             <FaArrowLeftLong />
             <span>Späť</span>

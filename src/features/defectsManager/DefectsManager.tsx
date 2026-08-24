@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { sleep } from '~/zzz_react/sleep/sleep'
+import { routes } from '~/app_router/routes/routes'
 import { turnOffAllFilters } from './_utils/turnOffAllFilters'
 import { toggleOffOnFilterOption } from './_utils/toggleOffOnFilterOption'
 import { updateFiltersOptionsCountDefects } from './_utils/updateFiltersOptionsCountDefects'
@@ -19,7 +20,6 @@ import DisplayControlBar from './displayControlBar/DisplayControlBar'
 import FilterControlBar from './filterControlBar/FilterControlBar'
 import PageWrapper from '~/app_shared/pageWrapper/PageWrapper'
 import css from './DefectsManager.module.css'
-import { routes } from '~/app_router/routes/routes'
 
 
 const DefectsManager = () => {
@@ -50,7 +50,7 @@ const DefectsManager = () => {
       return
     }
     set_filters(updateFiltersOptionsCountDefects(filteredDefects))
-  }, [filteredDefects])
+  }, [filteredDefects]) // eslint-disable-line
   
   return (
     <>

@@ -2,19 +2,20 @@ import DefectDetail from "~/defectDetail/DefectDetail"
 import DefectsManager from "~/defectsManager/DefectsManager"
 import InvestmentRequestsManager from "~/investmentRequestsManager/InvestmentRequestsManager"
 
-const _techDefectsManagerRoute = {
-  path: '/tech-defects-manager',
+
+const _techDefectsRoute = {
+  path: '/tech-defects',
   title: 'Technické nedostatky',
   element: DefectsManager,
 }
 
 const _techDefectRoute = {
-  path: (url_id?) => `/tech-defect/${url_id ? url_id : ':url_id'}`,
+  path: (url_id?: string) => `/tech-defect/${url_id ? url_id : ':url_id'}`,
   title: '',
   element: DefectDetail,
 }
 
-const _investmentRequestsManagerRoute = {
+const _investmentRequestsRoute = {
   path: '/investment-requests-manager',
   title: 'Investičné požiadavky',
   element: InvestmentRequestsManager,
@@ -22,6 +23,6 @@ const _investmentRequestsManagerRoute = {
 
 export const routes = {
   techDefect: _techDefectRoute,
-  techDefectsManager: _techDefectsManagerRoute,
-  investmentRequestsManager: _investmentRequestsManagerRoute,
+  techDefects: _techDefectsRoute,
+  investmentRequests: _investmentRequestsRoute,
 }

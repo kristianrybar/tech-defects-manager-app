@@ -4,9 +4,9 @@ import InitialLoadMockData from '~/app_shared/initialLoadMockData/InitialLoadMoc
 import GlobalHeader from '~/app/globalHeader/GlobalHeader'
 import { routes } from './routes/routes'
 
-const DefectsManagerPage = routes.techDefectsManager.element
+const DefectsManagerPage = routes.techDefects.element
 const DefectDetailPage = routes.techDefect.element
-const InvestmentRequestsManagerPage = routes.investmentRequestsManager.element
+const InvestmentRequestsManagerPage = routes.investmentRequests.element
 
 const RouteSwitch = () => {
   
@@ -18,11 +18,11 @@ const RouteSwitch = () => {
       
       <LayoutWrapper> 
         <Routes>
-          <Route path='/' element={<Navigate to={routes.techDefectsManager.path} />} />
+          <Route path='/' element={<Navigate to={routes.techDefects.path} />} />
 
-          <Route path={routes.techDefectsManager.path} element={<DefectsManagerPage />} />
+          <Route path={routes.techDefects.path} element={<DefectsManagerPage />} />
           <Route path={routes.techDefect.path()} element={<DefectDetailPage />} />
-          <Route path={routes.investmentRequestsManager.path} element={<InvestmentRequestsManagerPage />} />
+          <Route path={routes.investmentRequests.path} element={<InvestmentRequestsManagerPage />} />
         </Routes>
       </LayoutWrapper>
     </BrowserRouter>
