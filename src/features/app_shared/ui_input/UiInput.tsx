@@ -1,11 +1,12 @@
 import { GoSearch } from 'react-icons/go'
 import css from './UiInput.module.css'
 
+
 type Props = {
     value: string | number
-    onChange: (e) => void
+    onChange: (e: React.ChangeEvent<HTMLInputElement>) => void
     // OPTIONAL
-    label?: any
+    label?: string
     type?: 'text' | 'checkbox' | 'date' | 'number'
     placeholder?: string
     checked?: boolean

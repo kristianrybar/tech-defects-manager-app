@@ -1,5 +1,6 @@
 import css from './LoadingCircle.module.css'
 
+
 type Props = {
     size: number
     loadingColor: string

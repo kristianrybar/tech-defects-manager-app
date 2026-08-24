@@ -1,7 +1,8 @@
 import css from './UiModalContainer.module.css'
 
+
 type Props = {
-    children: any
+    children: React.ReactNode
     maxHeight?: string
     minHeight?: string
     height?: string

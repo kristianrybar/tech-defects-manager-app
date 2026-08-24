@@ -1,4 +1,4 @@
-import DefectDetail from "~/defectDetail/DefectDetail"
+import DefectDetailPage from "~/defectDetail/DefectDetailPage"
 import DefectsPage from "~/defects/DefectsPage"
 import InvestmentRequestsPage from "~/investmentRequests/InvestmentRequestsPage"
 
@@ -12,7 +12,7 @@ const _techDefectsRoute = {
 const _techDefectRoute = {
   path: (url_id?: string) => `/tech-defect/${url_id ? url_id : ':url_id'}`,
   title: '',
-  element: DefectDetail,
+  element: DefectDetailPage,
 }
 
 const _investmentRequestsRoute = {

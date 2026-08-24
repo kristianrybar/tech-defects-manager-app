@@ -30,7 +30,7 @@ const InitialLoadMockData = () => {
   
   useEffect(() => {
     getMockCoreData_AndSave()
-  }, [])
+  }, []) // eslint-disable-line
 
   return (
     <>

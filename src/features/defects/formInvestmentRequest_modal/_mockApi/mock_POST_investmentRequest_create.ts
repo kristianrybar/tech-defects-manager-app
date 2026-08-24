@@ -1,18 +1,19 @@
 import { api } from '~/zzz_api/core/api'
 
+
 type Params = {
-    defectsIDs
-    investmentRequestTypeIdentifier
-    investmentName
-    municipality
-    expectedImplementationDate
-    implementationDateJustification
-    technicalJustificationCode
-    planningGroup
-    investmentReasonCode
-    investmentReasonText
-    estimatedInvestmentCosts
-    proposedSolution
+    defectsIDs: string[]
+    investmentRequestTypeIdentifier: string
+    investmentName: string
+    municipality: string
+    expectedImplementationDate: string
+    implementationDateJustification: string
+    technicalJustificationCode: string
+    planningGroup: string
+    investmentReasonCode: string
+    investmentReasonText: string
+    estimatedInvestmentCosts: number
+    proposedSolution: string
 }
 
 export const mock_POST_investmentRequest_create = (p: Params) => {

@@ -1,7 +1,8 @@
 import { useEffect } from 'react'
 import { useMap } from 'react-leaflet'
 import { LatLngBounds, LatLngBoundsLiteral } from 'leaflet'
-import { TDefect } from '~/defectsManager/_types/TDefect'
+import { TDefect } from '~/defects/_types/TDefect'
+
 
 type Props = {
     defects: TDefect[]
@@ -26,7 +27,7 @@ const FitBounds = (props: Props) => {
         } 
         
         map.fitBounds(bounds)
-    }, [])
+    }, []) // eslint-disable-line
 
     return null
 }

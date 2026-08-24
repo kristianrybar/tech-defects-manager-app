@@ -1,17 +1,18 @@
-import { useState } from 'react'
+import { FocusEvent, useState } from 'react'
 import DatePicker from 'react-datepicker'
 
 import 'react-datepicker/dist/react-datepicker.css'
 import css from './UiDatePickerRange.module.css'
 
+
 type Props = {
-    onSelectStartDate: (e) => void
-    onSelectEndDate: (e) => void
+    onSelectStartDate: (e: FocusEvent<HTMLElement, Element>) => void
+    onSelectEndDate: (e: FocusEvent<HTMLElement, Element>) => void
 }
 
 export const UiDatePickerRange = (props: Props) => {
-    const [startDate, set_startDate] = useState<Date|null>(null)
-    const [endDate, set_endDate] = useState<Date|null>(null)
+    const [startDate, set_startDate] = useState<Date | null>(null)
+    const [endDate, set_endDate] = useState<Date | null>(null)
 
     return (
         <div className={css.uiDatePickerRange}>
@@ -50,7 +51,9 @@ export const UiDatePickerRange = (props: Props) => {
                     dateFormat='dd/MM/yyyy'
                 />
             </div>
-            <div className={css.hint}>Zoradiť podľa dátumu vytvorenia</div>
+            <div className={css.hint}>
+                Zoradiť podľa dátumu vytvorenia
+            </div>
         </div>
     )
 }

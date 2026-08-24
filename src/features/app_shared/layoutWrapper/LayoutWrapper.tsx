@@ -1,7 +1,8 @@
 import css from './LayoutWrapper.module.css'
 
+
 type Props = {
-  children
+  children: React.ReactNode
 }
 
 const LayoutWrapper = (props: Props) => {

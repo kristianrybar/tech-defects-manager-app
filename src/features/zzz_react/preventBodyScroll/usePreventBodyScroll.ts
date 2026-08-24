@@ -1,5 +1,6 @@
 import { useEffect } from 'react'
 
+
 export const usePreventBodyScroll = (shouldPreventScroll: boolean) => {
   useEffect(() => {
     if (!shouldPreventScroll) {

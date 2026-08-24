@@ -1,6 +1,7 @@
 import { mockApiAny } from '../mockApi/mockApiAny';
 
+
 export const api = {
-    get_m: (url) => mockApiAny(url, 'GET'),
-    post_m: (url, payloadDummy) => mockApiAny(url, 'POST', payloadDummy),
+    get_m: (url:string) => mockApiAny(url, 'GET'),
+    post_m: (url:string, payloadDummy: unknown) => mockApiAny(url, 'POST', payloadDummy),
 }

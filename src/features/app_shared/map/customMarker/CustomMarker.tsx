@@ -1,19 +1,21 @@
 import { useEffect, useRef } from 'react'
 import { Circle, Marker, Popup, Tooltip } from 'react-leaflet'
-import { TDefect } from '~/defectsManager/_types/TDefect'
+import type { Marker as LeafletMarker } from 'leaflet'
+import { TDefect } from '~/defects/_types/TDefect'
 import UiInput from '~/app_shared/ui_input/UiInput'
 import css from './CustomMarker.module.css'
+
 
 type Props = {
     defect: TDefect
     isDefectChecked: boolean
-    onCheckbox: (e) => void
+    onCheckbox: (e: React.ChangeEvent<HTMLInputElement>) => void
 }
 
 const CustomMarker = (props: Props) => {
     const d = props.defect
     
-    const refMarker = useRef<any>(null)
+    const refMarker = useRef<LeafletMarker | null>(null)
 
     useEffect(() => {
         if (!refMarker)

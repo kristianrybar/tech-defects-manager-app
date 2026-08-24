@@ -1,17 +1,17 @@
 import { useEffect, useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 import { FaArrowLeftLong } from "react-icons/fa6"
-import { TDefect } from '~/defectsManager/_types/TDefect'
-import { useDefectsStore } from '~/defectsManager/_stores/useDefectsStore'
-import { useSelectedDefectsStore } from '~/defectsManager/_stores/useSelectedDefectsStore'
-import { isDefectChecked } from '~/defectsManager/_utils/isDefectChecked'
+import { TDefect } from '~/defects/_types/TDefect'
+import { useDefectsStore } from '~/defects/_stores/useDefectsStore'
+import { useSelectedDefectsStore } from '~/defects/_stores/useSelectedDefectsStore'
+import { isDefectChecked } from '~/defects/_utils/isDefectChecked'
 import { routes } from '~/app_router/routes/routes'
 import PageWrapper from '~/app_shared/pageWrapper/PageWrapper'
 import Map from '~/app_shared/map/Map'
 import css from './DefectDetail.module.css'
 
 
-const DefectDetail = () => {
+const DefectDetailPage = () => {
   const selectedDefects = useSelectedDefectsStore(s => s.selectedDefects)
   const selectDefect = useSelectedDefectsStore(s => s.selectDefect)
   const deselectDefect = useSelectedDefectsStore(s => s.deselectDefect)
@@ -93,9 +93,12 @@ const DefectDetail = () => {
                 defects={[findedDefect]}
                 isDefectChecked={(defectID) => isDefectChecked(defectID, selectedDefects)}
                 onSelectDefect={(e, d) => {
-                  e.target.checked
-                    ? selectDefect(d)
-                    : deselectDefect(d.defectID)
+                  const isChecked = e.target.checked
+                  if (isChecked) {
+                    selectDefect(d)
+                  } else {
+                    deselectDefect(d.defectID)
+                  }
                 }}
               />
             </div>
@@ -106,4 +109,4 @@ const DefectDetail = () => {
   )
 }
 
-export default DefectDetail
+export default DefectDetailPage

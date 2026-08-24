@@ -4,6 +4,7 @@ import { IoIosArrowDown, IoIosArrowUp } from 'react-icons/io'
 import css from './UiDropdown.module.css'
 import './ReactDropdownOverrides.css'
 
+
 type Props = {
     options: (Group | Option | string)[]
     onChange: (option: Option) => void
@@ -18,7 +19,6 @@ type Props = {
     onClearOption?: () => void
     width?: string
 }
-
 
 const UiDropdown = (props: Props) => {
     return (

@@ -4,7 +4,7 @@ import css from './UiButton.module.css'
 
 type Props = {
     children: string | string[] | ReactNode
-    onClick?: (...args: any[]) => any
+    onClick?: () => void
     type?: 'button' | 'submit'
     disabled?: boolean
     className?: string

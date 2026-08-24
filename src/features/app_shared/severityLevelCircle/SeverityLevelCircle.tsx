@@ -1,6 +1,7 @@
 import { ReactNode } from 'react'
 import css from './SeverityLevelCircle.module.css'
 
+
 type Props = {
   severityLevel: string
   severityLevelSpan?: ReactNode

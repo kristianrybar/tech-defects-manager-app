@@ -1,4 +1,4 @@
-export const mockApiAny = async (url, method, payloadDummy?) => {
+export const mockApiAny = async (url: string, method: string, payloadDummy?: unknown) => {
     const host = '/mocks' 
     let postfix = '.json'
 
@@ -6,7 +6,7 @@ export const mockApiAny = async (url, method, payloadDummy?) => {
         postfix = '.POST.json'
     } 
     
-    let full = host + url + postfix
+    const full = host + url + postfix
     try {
         let resp = await fetch(full)
         let data = await _apiProcess(resp)

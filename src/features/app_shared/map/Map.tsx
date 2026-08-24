@@ -1,15 +1,16 @@
-import { MapContainer, TileLayer, useMap } from 'react-leaflet'
-import { TDefect } from '~/defectsManager/_types/TDefect'
+import { MapContainer, TileLayer } from 'react-leaflet'
+import { TDefect } from '~/defects/_types/TDefect'
 import CustomMarker from './customMarker/CustomMarker'
 import FitBounds from './fitBounds/FitBounds'
 import SetZoom from './setZoom/SetZoom'
 import css from './Map.module.css'
 
+
 type Props = {
   zoom?: number
   defects: TDefect[]
-  isDefectChecked: (defectID) => boolean
-  onSelectDefect: (e, defect) => void
+  isDefectChecked: (defectID: string) => boolean
+  onSelectDefect: (e: React.ChangeEvent<HTMLInputElement>, defect: TDefect) => void
 }
 
 const Map = (props: Props) => {
