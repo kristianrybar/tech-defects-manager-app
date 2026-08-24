@@ -3,7 +3,8 @@ import { useInvestmentRequestsStore } from './_stores/useInvestmentRequestsStore
 import PageWrapper from '~/app_shared/pageWrapper/PageWrapper'
 import css from './InvestmentRequestsManager.module.css'
 
-const InvestmentRequestsManager = () => {
+
+const InvestmentRequestsPage = () => {
   const { investmentRequests } = useInvestmentRequestsStore()
   console.log(investmentRequests)
 
@@ -17,4 +18,4 @@ const InvestmentRequestsManager = () => {
   )
 }
 
-export default InvestmentRequestsManager
+export default InvestmentRequestsPage

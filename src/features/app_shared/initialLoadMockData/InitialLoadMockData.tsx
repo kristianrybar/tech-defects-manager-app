@@ -2,7 +2,7 @@ import { useEffect, useState } from "react"
 import { sleep } from "~/zzz_react/sleep/sleep"
 import { mock_GET_mockData } from "~/defects/_mockApi/mock_GET_mockData"
 import { useDefectsStore } from "~/defects/_stores/useDefectsStore"
-import { useInvestmentRequestsStore } from "~/investmentRequestsManager/_stores/useInvestmentRequestsStore"
+import { useInvestmentRequestsStore } from "~/investmentRequests/_stores/useInvestmentRequestsStore"
 import LoadingCircle from '~/app_shared/loadingCircle/LoadingCircle'
 
 

@@ -68,9 +68,11 @@ const DefectsPage = () => {
               <div className={css.defectsAreaWrapper}>
                 <DisplayControlBar
                   onOpenForm={() => {
-                    !selectedDefects.length
-                      ? alert('Nie su vybrané žiadne nedostatky')
-                      : set_isOpenFormModal(true)
+                    if (!selectedDefects.length) {
+                      alert('Nie su vybrané žiadne nedostatky')
+                    } else {
+                      set_isOpenFormModal(true)
+                    }
                   }}
                   listMode={listMode}
                   onClickTable={() => set_listMode('table')}
@@ -97,9 +99,11 @@ const DefectsPage = () => {
                   filteredDefects={filteredDefects}
                   onOpenDetail={(defectID) => navigate(routes.techDefect.path(defectID))}
                   onSelectDefect={(defect, isChecked) => {
-                    isChecked
-                      ? selectDefect(defect)
-                      : deselectDefect(defect.defectID)
+                    if (isChecked) {
+                      selectDefect(defect)
+                    } else {
+                      deselectDefect(defect.defectID)
+                    }
                   }}
                   isDefectChecked={(defectID) => isDefectChecked(defectID, selectedDefects)}
                   searchQuery={searchQuery}

@@ -1,6 +1,6 @@
 import DefectDetail from "~/defectDetail/DefectDetail"
 import DefectsPage from "~/defects/DefectsPage"
-import InvestmentRequestsManager from "~/investmentRequestsManager/InvestmentRequestsManager"
+import InvestmentRequestsPage from "~/investmentRequests/InvestmentRequestsPage"
 
 
 const _techDefectsRoute = {
@@ -18,7 +18,7 @@ const _techDefectRoute = {
 const _investmentRequestsRoute = {
   path: '/investment-requests-manager',
   title: 'Investičné požiadavky',
-  element: InvestmentRequestsManager,
+  element: InvestmentRequestsPage,
 }
 
 export const routes = {

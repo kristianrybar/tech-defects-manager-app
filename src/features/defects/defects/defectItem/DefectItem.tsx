@@ -4,7 +4,8 @@ import { FaArrowRightLong } from "react-icons/fa6"
 import { highlightText } from './_utils/highlightText'
 import UiInput from '~/app_shared/ui_input/UiInput'
 import SeverityLevelCircle from '~/app_shared/severityLevelCircle/SeverityLevelCircle'
-import css from './Defect.module.css'
+import css from './DefectItem.module.css'
+
 
 type Props = {
   defect: TDefect

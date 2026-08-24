@@ -1,5 +1,5 @@
 import { TInvestmentRequest } from '../_types/TInvestmentRequest'
-import InvestmentRequest from './investmentRequest/InvestmentRequest'
+import InvestmentRequestItem from './investmentRequestItem/InvestmentRequestItem'
 // import css from './InvestmentRequests.module.css'
 
 type Props = {
@@ -14,7 +14,7 @@ const InvestmentRequests = (props: Props) => {
           Investments
           {
             props.investmentRequests.map((investmentRequest) => 
-              <InvestmentRequest
+              <InvestmentRequestItem
                 key={investmentRequest.investmentRequestID}
                 investmentRequest={investmentRequest}
               />

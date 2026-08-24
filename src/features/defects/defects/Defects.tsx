@@ -1,5 +1,5 @@
 import { TDefect } from '../_types/TDefect'
-import Defect from './defect/Defect'
+import DefectItem from './defectItem/DefectItem'
 import Map from '~/app_shared/map/Map'
 import css from './Defects.module.css'
 
@@ -33,7 +33,7 @@ const Defects = (props: Props) => {
               </div>
 
               {props.filteredDefects.map(d =>
-                <Defect
+                <DefectItem
                   key={d.defectID}
                   defect={d}
                   onOpenDetail={() => props.onOpenDetail(d.defectID)}

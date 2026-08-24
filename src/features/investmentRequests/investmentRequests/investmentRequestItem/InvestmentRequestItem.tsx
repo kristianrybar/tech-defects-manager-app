@@ -1,11 +1,11 @@
-import { TInvestmentRequest } from '~/investmentRequestsManager/_types/TInvestmentRequest'
+import { TInvestmentRequest } from '~/investmentRequests/_types/TInvestmentRequest'
 import css from './InvestmentRequest.module.css'
 
 type Props = {
   investmentRequest: TInvestmentRequest
 }
 
-const InvestmentRequest = (props: Props) => {
+const InvestmentRequestItem = (props: Props) => {
   const ir = props.investmentRequest
 
   return (
@@ -15,4 +15,4 @@ const InvestmentRequest = (props: Props) => {
   )
 }
 
-export default InvestmentRequest
+export default InvestmentRequestItem

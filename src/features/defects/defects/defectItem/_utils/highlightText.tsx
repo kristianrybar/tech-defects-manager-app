@@ -1,4 +1,5 @@
-import { ignoreDiacritics } from '~/defectsManager/_utils/ignoreDiacritics'
+import { ignoreDiacritics } from '~/defects/_utils/ignoreDiacritics'
+
 
 export const highlightText = (text: string, searchTerm: string) => {
     if (!searchTerm || !text)  {

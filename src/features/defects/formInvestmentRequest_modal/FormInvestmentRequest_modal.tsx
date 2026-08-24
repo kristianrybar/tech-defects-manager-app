@@ -5,7 +5,7 @@ import { validateFormData_andShouldReturnNewErrors } from './_utils/validateForm
 import { TDefect } from '../_types/TDefect'
 import { PiSpinner } from 'react-icons/pi'
 import useInvestmentRequestCreating from './_hooks/useInvestmentRequestCreating'
-import Defect from '../defects/defect/Defect'
+import Defect from '../defects/defectItem/DefectItem'
 import UiModalContainer from '~/app_shared/ui_modalContainer/UiModalContainer'
 import UiButton from '~/app_shared/ui_button/UiButton'
 import UiInput from '~/app_shared/ui_input/UiInput'
