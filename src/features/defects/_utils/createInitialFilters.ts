@@ -1,5 +1,4 @@
 import { TDefect } from '../_types/TDefect'
-import { TTechnicalObject } from '../_types/TTechnicalObject'
 import { TFilter } from '../filterControlSideBar/_types/TFilter'
 import { TFilterOption } from '../filterControlSideBar/_types/TFilterOption'
 
@@ -35,18 +34,18 @@ export const createInitialFilters = (defects: TDefect[]) => {
   
   defects.forEach(d => {
     // construction year
-    _createFilterOptions(filters, 'Rok výstavby', d.technicalObject.constructionYear, defects, 'constructionYear')
+    _createFilterOptions(filters, 'Rok výstavby', d.technicalObject.constructionYear, defects, defect => defect.technicalObject.constructionYear)
     
     filters.find(f => f.filterName == 'Rok výstavby')?.filterOptions.sort((a: TFilterOption, b: TFilterOption) => Number(b.name) - Number(a.name)) // construction year - sort zostupne podla roka
 
     // supervisor
-    _createFilterOptions(filters, 'Zodpovedná osoba', d.technicalObject.supervisor, defects, 'supervisor')
+    _createFilterOptions(filters, 'Zodpovedná osoba', d.technicalObject.supervisor, defects, defect => defect.technicalObject.supervisor)
 
     // municapility
-    _createFilterOptions(filters, 'Obec', d.technicalObject.municipality, defects, 'municipality')
+    _createFilterOptions(filters, 'Obec', d.technicalObject.municipality, defects, defect => defect.technicalObject.municipality)
 
     // defect state
-    _createFilterOptions(filters, 'Stav nedostatku', d.defectState, defects, 'defectsState')
+    _createFilterOptions(filters, 'Stav nedostatku', d.defectState, defects, defect => defect.defectState)
   })
 
   return filters
@@ -121,6 +120,7 @@ const _getCountBySeverityLevel_andCreateOptions = (defects: TDefect[]) => {
 }
 
 const _getCountByVoltageLevel_andCreateOptions = (defects: TDefect[]) => {
+  console.log(defects)
   return  {
     filterName: 'Úroveň napätia',
     filterOptions: [
@@ -176,8 +176,14 @@ const _getCountByCruciality_andCreateOptions = (defects: TDefect[]) => {
   }
 }
 
-const _createFilterOptions = (filters: TFilter[], filterName: string, value: string | number, defects: TDefect[], comparisonKey: keyof TTechnicalObject) => {
-  if (!value || !filterName || !comparisonKey) {
+const _createFilterOptions = (
+  filters: TFilter[], 
+  filterName: string, 
+  value: string | number, 
+  defects: TDefect[], 
+  getComparisonValue: (defect: TDefect) => string | number
+) => {
+  if (!value || !filterName || !getComparisonValue) {
     return
   }
   if (!filters.length || !defects.length) {
@@ -189,7 +195,7 @@ const _createFilterOptions = (filters: TFilter[], filterName: string, value: str
     return
   } 
 
-  const countDefects = defects.filter(def => def.technicalObject[comparisonKey] == value).length
+  const countDefects = defects.filter(def => getComparisonValue(def) == value).length
   const filterOption = {
     name: value,
     isActive: false,

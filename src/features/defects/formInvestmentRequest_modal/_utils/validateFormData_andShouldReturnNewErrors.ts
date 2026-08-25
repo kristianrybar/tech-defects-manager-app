@@ -1,6 +1,9 @@
-export const validateFormData_andShouldReturnNewErrors = (formData) => {
+import { defaultFormData } from "./defaultFormData"
+
+
+export const validateFormData_andShouldReturnNewErrors = (formData: typeof defaultFormData) => {
     if (!formData) {
-        return {error: 'Form data not provided'}
+        return { error: 'Form data not provided' }
     }
 
     const errorMessage = 'This field is required'
@@ -27,5 +30,5 @@ export const validateFormData_andShouldReturnNewErrors = (formData) => {
         }
     }
 
-    return {newErrors: newErrors}
+    return { newErrors: newErrors }
 }

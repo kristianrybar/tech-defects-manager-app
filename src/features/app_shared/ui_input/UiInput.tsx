@@ -6,7 +6,7 @@ type Props = {
     value: string | number
     onChange: (e: React.ChangeEvent<HTMLInputElement>) => void
     // OPTIONAL
-    label?: string
+    label?: string | React.ReactNode
     type?: 'text' | 'checkbox' | 'date' | 'number'
     placeholder?: string
     checked?: boolean

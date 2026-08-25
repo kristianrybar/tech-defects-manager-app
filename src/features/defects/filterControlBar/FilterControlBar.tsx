@@ -1,3 +1,4 @@
+import { FocusEvent } from 'react'
 import { UiDatePickerRange } from '~/app_shared/ui_datePickerRange/UiDatePickerRange'
 import { Option } from 'react-dropdown'
 import UiInput from '~/app_shared/ui_input/UiInput'
@@ -11,8 +12,8 @@ type Props = {
     onSearchQuery: (e: React.ChangeEvent<HTMLInputElement>) => void
 
     // date from/to
-    onSelectStartDate: (e: React.ChangeEvent<HTMLInputElement>) => void
-    onSelectEndDate: (e: React.ChangeEvent<HTMLInputElement>) => void
+    onSelectStartDate: (e: FocusEvent<HTMLElement, Element>) => void
+    onSelectEndDate: (e: FocusEvent<HTMLElement, Element>) => void
 
     // dropdown
     dropdownQuery: string

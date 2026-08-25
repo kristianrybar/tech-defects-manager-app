@@ -1,7 +1,10 @@
 import { produce } from 'immer'
+import { TDefect } from '../_types/TDefect'
+import { TFilter } from '../filterControlSideBar/_types/TFilter'
 
-export const updateFiltersOptionsCountDefects = (filteredDefects) => {
-  return produce((draft) => {
+
+export const updateFiltersOptionsCountDefects = (filteredDefects: TDefect[]) => {
+  return produce((draft: TFilter[]) => {
     if (!filteredDefects.length) {
       return
     }
@@ -29,7 +32,7 @@ export const updateFiltersOptionsCountDefects = (filteredDefects) => {
       return
     }
     filter2.filterOptions.map(o => {
-      if (['1', '2', '3', '4'].includes(o.name)) {
+      if (['1', '2', '3', '4'].includes(o.name.toString())) {
         o.countDefects = filteredDefects.filter(d => d.defectType.defaultSeverityLevel == o.name).length
       }
     })
@@ -49,7 +52,7 @@ export const updateFiltersOptionsCountDefects = (filteredDefects) => {
       return
     }
     filter4.filterOptions.map(o => {
-      if (['NN Vedenia', 'VN Vedenia', 'VVN Vedenia', 'Trafostanice', 'Elektrické stanice'].includes(o.name)) {
+      if (['NN Vedenia', 'VN Vedenia', 'VVN Vedenia', 'Trafostanice', 'Elektrické stanice'].includes(o.name.toString())) {
         o.countDefects = filteredDefects.filter(defect => defect.technicalObject.technicalObjectType?.voltageLevel.voltageLevelName == o.name).length
       }
     })

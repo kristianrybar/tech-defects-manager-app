@@ -1,6 +1,6 @@
 import { TDefect } from '../_types/TDefect'
 import DefectItem from './defectItem/DefectItem'
-import Map from '~/app_shared/map/Map'
+import Map from '~/zzz_reactLeaflet/Map'
 import css from './Defects.module.css'
 
 
@@ -37,7 +37,7 @@ const Defects = (props: Props) => {
                   key={d.defectID}
                   defect={d}
                   onOpenDetail={() => props.onOpenDetail(d.defectID)}
-                  onCheckbox={(e) => props.onSelectDefect(e.target.checked, d)}
+                  onCheckbox={(e) => props.onSelectDefect(d, e.target.checked)}
                   searchQuery={props.searchQuery}
                   checked={props.isDefectChecked(d.defectID)}
                 />

@@ -2,8 +2,11 @@ import { useEffect, useState } from 'react'
 import { IoClose } from 'react-icons/io5'
 import { Option } from 'react-dropdown'
 import { validateFormData_andShouldReturnNewErrors } from './_utils/validateFormData_andShouldReturnNewErrors'
+import { TInvestmentRequestType } from '~/investmentRequests/_types/TInvestmentRequestType'
 import { TDefect } from '../_types/TDefect'
 import { PiSpinner } from 'react-icons/pi'
+import { sleep } from '~/zzz_react/sleep/sleep'
+import { defaultFormData } from './_utils/defaultFormData'
 import useInvestmentRequestCreating from './_hooks/useInvestmentRequestCreating'
 import Defect from '../defects/defectItem/DefectItem'
 import UiModalContainer from '~/app_shared/ui_modalContainer/UiModalContainer'
@@ -11,12 +14,18 @@ import UiButton from '~/app_shared/ui_button/UiButton'
 import UiInput from '~/app_shared/ui_input/UiInput'
 import UiDropdown from '~/app_shared/ui_dropdown/UiDropdown'
 import css from './FormInvestmentRequest_modal.module.css'
-import { sleep } from '~/zzz_react/sleep/sleep'
+
 
 type Props = {
   onClose: () => void
   selectedDefects: TDefect[]
-  formEnums
+  formEnums: {
+    municipalities: string[]
+    investmentRequestTypes: TInvestmentRequestType[]
+    technicalJustificationCodes: string[]
+    planningGroups: string[]
+    investmentReasonCodes: string[]
+  }
   onSuccessSubmit: () => void
 }
 
@@ -25,20 +34,8 @@ const FormInvestmentRequest_modal = (props: Props) => {
   const [proccesing, set_processing] = useState<boolean>(false)
   const [showSelectedDefects, set_showSelectedDefects] = useState<boolean>(false)
   const { createInvestmentRequest } = useInvestmentRequestCreating()
-  const [formData, set_formData] = useState({
-    investmentRequestTypeIdentifier: '',
-    investmentName: '',
-    municipality: '',
-    expectedImplementationDate: '',
-    implementationDateJustification: '',
-    technicalJustificationCode: '',
-    planningGroup: '',
-    investmentReasonCode: '',
-    investmentReasonText: '',
-    estimatedInvestmentCosts: 0,
-    proposedSolution: '',
-    defectsIDs: [] as string[],
-  })
+
+  const [formData, set_formData] = useState(defaultFormData)
 
   const [errors, set_errors] = useState({
     investmentRequestTypeIdentifier: '',
@@ -55,25 +52,25 @@ const FormInvestmentRequest_modal = (props: Props) => {
     defectsIDs: ''
   })
 
-  const transformedInvestmentRequestTypes: Option[] = props.formEnums.investmentRequestTypes.map(item => ({
+  const transformedInvestmentRequestTypes: Option[] = props.formEnums.investmentRequestTypes.map((item: TInvestmentRequestType) => ({
     value: item.investmentRequestTypeIdentifier,
     label: item.investmentRequestTypeName
   }))
 
-  const onSubmit = async (e) => {
+  const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     set_processing(true)
     set_errorAPI('')
 
-    const result: any = validateFormData_andShouldReturnNewErrors(formData)
-    if (result.error) {
+    const result = validateFormData_andShouldReturnNewErrors(formData)
+    if (!result || result.error) {
       if (result.newErrors) {
         set_errors(result.newErrors)
       }
       set_processing(false)
       return
     }
-    set_errors(result.newErrors)
+    set_errors(result.newErrors as typeof errors)
 
     await sleep() // mock loading delay
     const resp = await createInvestmentRequest(formData)
@@ -93,7 +90,7 @@ const FormInvestmentRequest_modal = (props: Props) => {
     }
     
     set_formData(prev => ({...prev, defectsIDs: props.selectedDefects.map(d => d.defectID)}))
-  }, [])
+  }, []) // eslint-disable-line
 
   return (
     <UiModalContainer
@@ -247,7 +244,7 @@ const FormInvestmentRequest_modal = (props: Props) => {
                 onChange={(e) => {
                   set_errors(prev => ({...prev, estimatedInvestmentCosts: ''}))
                   set_errorAPI('')
-                  set_formData(prev => ({...prev, estimatedInvestmentCosts: e.target.value}))}
+                  set_formData(prev => ({...prev, estimatedInvestmentCosts: Number(e.target.value) || 0}))}
                 } 
                 min={0}
                 placeholder=' '

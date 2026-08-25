@@ -1,11 +1,11 @@
-import { TFilter } from '../../_types/TFilter'
+import { TFilter } from './_types/TFilter'
 import FilterGroup from './filterGroup/FilterGroup'
 import css from './FilterControlSideBar.module.css'
 
 
 type Props = {
     filters: TFilter[]
-    onCheckbox: (index, filterName) => void
+    onCheckbox: (index: number, filterName: string) => void
     onTurnOffAllFilters: () => void
 }
 

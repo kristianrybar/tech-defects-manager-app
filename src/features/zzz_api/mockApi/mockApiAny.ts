@@ -8,8 +8,8 @@ export const mockApiAny = async (url: string, method: string, payloadDummy?: unk
     
     const full = host + url + postfix
     try {
-        let resp = await fetch(full)
-        let data = await _apiProcess(resp)
+        const resp = await fetch(full)
+        const data = await _apiProcess(resp)
         console.log('🦢🦢🦢 mockApiAny', full, 'resp: ', data, 'payloadDummy: ', payloadDummy)
         return data
     } catch (e) {
@@ -17,8 +17,8 @@ export const mockApiAny = async (url: string, method: string, payloadDummy?: unk
     }
 }
 
-const _apiProcess = async (response) => {
-    let text = await response.text()
+const _apiProcess = async (response: Response) => {
+    const text = await response.text()
     let json
     
     try {

@@ -1,9 +1,10 @@
 import { mock_POST_investmentRequest_create } from '../_mockApi/mock_POST_investmentRequest_create'
+import { defaultFormData } from '../_utils/defaultFormData'
 
 
 const useInvestmentRequestCreating = () => {
 
-    const createInvestmentRequest = async (formData) => {
+    const createInvestmentRequest = async (formData: typeof defaultFormData) => {
         const resp = await mock_POST_investmentRequest_create({
             defectsIDs: formData.defectsIDs,
             investmentRequestTypeIdentifier: formData.investmentRequestTypeIdentifier,

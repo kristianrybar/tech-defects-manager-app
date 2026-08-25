@@ -1,7 +1,7 @@
 import { useInvestmentRequestsStore } from './_stores/useInvestmentRequestsStore'
 // import InvestmentRequests from './investmentRequests/InvestmentRequests'
 import PageWrapper from '~/app_shared/pageWrapper/PageWrapper'
-import css from './InvestmentRequestsManager.module.css'
+import css from './InvestmentRequestsPage.module.css'
 
 
 const InvestmentRequestsPage = () => {

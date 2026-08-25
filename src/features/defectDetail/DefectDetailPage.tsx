@@ -7,8 +7,8 @@ import { useSelectedDefectsStore } from '~/defects/_stores/useSelectedDefectsSto
 import { isDefectChecked } from '~/defects/_utils/isDefectChecked'
 import { routes } from '~/app_router/routes/routes'
 import PageWrapper from '~/app_shared/pageWrapper/PageWrapper'
-import Map from '~/app_shared/map/Map'
-import css from './DefectDetail.module.css'
+import Map from '~/zzz_reactLeaflet/Map'
+import css from './DefectDetailPage.module.css'
 
 
 const DefectDetailPage = () => {

@@ -1,4 +1,10 @@
-export const filterByDateRange = (dateFilter, createdDate) => {
+import { TDateFilter } from "~/defects/_types/TDateFilter"
+
+
+export const filterByDateRange = (
+    dateFilter: TDateFilter, 
+    createdDate: string | Date
+) => {
     if (!dateFilter.startDate && !dateFilter.endDate) {
         return true
     }
@@ -19,8 +25,8 @@ export const filterByDateRange = (dateFilter, createdDate) => {
         isoEndDate = `${year}/${month}/${day}/${'00:00:00'}`
     }
 
-    let startDate = isoStartDate ? new Date(isoStartDate) : null
-    let endDate = isoEndDate ? new Date(isoEndDate) : null
+    const startDate = isoStartDate ? new Date(isoStartDate) : null
+    const endDate = isoEndDate ? new Date(isoEndDate) : null
 
     // datum OD
     if (startDate && !endDate) {

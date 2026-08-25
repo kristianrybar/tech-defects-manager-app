@@ -4,4 +4,5 @@ export type TTechnicalObjectType = {
     technicalObjectTypeIdentifier: string
     technicalObjectTypeName: string
     voltageLevel: TVoltageLevel
+    voltageLevelIdentifier?: string
 }

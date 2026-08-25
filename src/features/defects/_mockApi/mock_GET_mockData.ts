@@ -4,6 +4,24 @@ import { TDefect } from '../_types/TDefect'
 import { TTechnicalObject } from '../_types/TTechnicalObject'
 import { TTechnicalObjectType } from '../_types/TTechnicalObjectType'
 import { TVoltageLevel } from '../_types/TVoltageLevel'
+import { TInvestmentRequestType } from '~/investmentRequests/_types/TInvestmentRequestType'
+import { TInvestmentRequest } from '~/investmentRequests/_types/TInvestmentRequest'
+
+
+type MockData = {
+    defects: TDefect[]
+    defectTypes: TDefectType[]
+    technicalObjects: TTechnicalObject[]
+    technicalObjectTypes: TTechnicalObjectType[]
+    voltageLevels: TVoltageLevel[]
+    investmentRequestTypes: TInvestmentRequestType[]
+    investmentRequests: TInvestmentRequest[]
+} | { error: string }
+
+type MockDataSuccess = Exclude<MockData, { error: string }>
+type TTechnicalObjectWithoutVoltageLevel = Omit<TTechnicalObject, 'technicalObjectType'> & {
+    technicalObjectType: Omit<TTechnicalObjectType, 'voltageLevel'>
+}
 
 
 export const mock_GET_mockData = async () => {
@@ -13,7 +31,7 @@ export const mock_GET_mockData = async () => {
     }
     
     const finalDefects = _prepareDefects(resp)
-    if (finalDefects.error) {
+    if ('error' in finalDefects) {
         return finalDefects
     }
     
@@ -25,20 +43,20 @@ export const mock_GET_mockData = async () => {
 }
 
 
-const _prepareDefects = (resp) => {
-    const defects: TDefect[] = resp.defects as TDefect[]
+const _prepareDefects = (resp: MockDataSuccess) => {
+    const defects: TDefect[] = resp.defects ? resp.defects : []
     const defectTypes: TDefectType[] = resp.defectTypes
     const technicalObjects: TTechnicalObject[] = resp.technicalObjects
     const technicalObjectTypes: TTechnicalObjectType[] = resp.technicalObjectTypes
     const voltageLevels: TVoltageLevel[] = resp.voltageLevels
 
     const defectsWithTypes = _assingDefectTypesToDefect(defects, defectTypes)
-    if (defectsWithTypes.error) {
+    if ('error' in defectsWithTypes) {
         return defectsWithTypes
     }
 
     const finalDefects = _assingTechnicalObjectsToDefect(defectsWithTypes as TDefect[], technicalObjects, technicalObjectTypes, voltageLevels)
-    if (finalDefects.error) {
+    if ('error' in finalDefects) {
         return finalDefects
     }
 
@@ -70,12 +88,12 @@ const _assingDefectTypesToDefect = (defects: TDefect[], defectTypes: TDefectType
 
 const _assingTechnicalObjectsToDefect = (defects: TDefect[], technicalObjects: TTechnicalObject[], technicalObjectsTypes: TTechnicalObjectType[], voltageLevels: TVoltageLevel[]) => {
     const updatedTechObjects = _assingTechnicalObjectTypesToTechnicalObject(technicalObjects, technicalObjectsTypes)
-    if (updatedTechObjects.error) {
+    if ('error' in updatedTechObjects) {
         return updatedTechObjects
     }
 
     const updatedTechObjects2 = _assingVoltageLevelsToTechnicalObject(updatedTechObjects, voltageLevels)
-    if (updatedTechObjects2.error) {
+    if ('error' in updatedTechObjects2) {
         return updatedTechObjects2
     }
 
@@ -112,20 +130,20 @@ const _assingTechnicalObjectTypesToTechnicalObject = (technicalObjects: TTechnic
         return {
             ...techObj,
             technicalObjectType: {
-                technicalObjectTypeIdentifier: techObjType ? techObjType.technicalObjectTypeIdentifier : null,
-                technicalObjectTypeName: techObjType ? techObjType.technicalObjectTypeName : null,
-                voltageLevelIdentifier: techObjType ? techObjType.voltageLevelIdentifier : null,
+                technicalObjectTypeIdentifier: techObjType ? techObjType.technicalObjectTypeIdentifier : '',
+                technicalObjectTypeName: techObjType ? techObjType.technicalObjectTypeName : '',
+                voltageLevelIdentifier: techObjType ? (techObjType.voltageLevelIdentifier ?? '') : '',
             }
         }
     })
     if (!techObjectsWithTypes || !techObjectsWithTypes.length) {
-        return {error: 'Assigning tech. object types to tech. objects failed'}
+        return { error: 'Assigning tech. object types to tech. objects failed' }
     }
 
     return techObjectsWithTypes
 }
 
-const _assingVoltageLevelsToTechnicalObject = (updatedTechObjects: TTechnicalObject[], voltageLevels: TVoltageLevel[]) => {
+const _assingVoltageLevelsToTechnicalObject = (updatedTechObjects: TTechnicalObjectWithoutVoltageLevel[], voltageLevels: TVoltageLevel[]) => {
     const techObjectsWithTypesAndVoltageLevels = updatedTechObjects.map(techObj => {
         const voltageLevel = voltageLevels.find(vL => vL.voltageLevelIdentifier == techObj.technicalObjectType.voltageLevelIdentifier)
 

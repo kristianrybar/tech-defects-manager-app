@@ -19,7 +19,7 @@ import Defects from './defects/Defects'
 import DisplayControlBar from './displayControlBar/DisplayControlBar'
 import FilterControlBar from './filterControlBar/FilterControlBar'
 import PageWrapper from '~/app_shared/pageWrapper/PageWrapper'
-import css from './DefectsManager.module.css'
+import css from './DefectsPage.module.css'
 
 
 const DefectsPage = () => {
@@ -82,10 +82,12 @@ const DefectsPage = () => {
 
                 <FilterControlBar
                   // date from/to
-                  onSelectStartDate={(e) => selectDateQuery_withValidation(e.target.value, 'startDate')}
-                  onSelectEndDate={(e) => selectDateQuery_withValidation(e.target.value, 'endDate')}
+                  onSelectStartDate={(e) => {
+                    selectDateQuery_withValidation((e.target as HTMLInputElement).value, 'startDate')}
+                  }
+                  onSelectEndDate={(e) => selectDateQuery_withValidation((e.target as HTMLInputElement).value, 'endDate')}
                   // searchbar
-                  onSearchQuery={(e) => set_searchQuery(e.target.value)}
+                  onSearchQuery={(e) => set_searchQuery((e.target as HTMLInputElement).value)}
                   searchQuery={searchQuery}
                   // dropdown
                   onChangeDropdown={(e) => set_dropdownQuery(e.value)}

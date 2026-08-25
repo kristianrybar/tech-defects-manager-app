@@ -1,4 +1,7 @@
 import { useEffect, useState } from 'react'
+import { TDefect } from '~/defects/_types/TDefect'
+import { TFilter } from '~/defects/filterControlSideBar/_types/TFilter'
+import { TDateFilter } from '~/defects/_types/TDateFilter'
 import { filterByConstructionYear } from '../_utils/filterByConstructionYear'
 import { filterByCruciality } from '../_utils/filterByCruciality'
 import { filterByDateRange } from '../_utils/filterByDateRange'
@@ -10,8 +13,6 @@ import { filterBySeverityLevel } from '../_utils/filterBySeverityLevel'
 import { filterBySupervisor } from '../_utils/filterBySupervisor'
 import { filterByVoltageLevel } from '../_utils/filterByVoltageLevel'
 import { sortByDate } from '../_utils/sortByDate'
-import { TDefect } from '~/defects/_types/TDefect'
-import { TFilter } from '~/defects/filterControlSideBar/_types/TFilter'
 
 
 const useDefectsFiltering = (
@@ -19,11 +20,11 @@ const useDefectsFiltering = (
   filters: TFilter[],
   searchQuery: string,
   dropdownQuery: string,
-  dateFilter
+  dateFilter: TDateFilter
 ) => {
   const [filteredDefects, set_filteredDefects] = useState<TDefect[]>(defects || [])
   
-  const filterDefects = (defects: TDefect[], dropdownQuery: string, searchQuery: string, dateFilter: unknown) => {
+  const filterDefects = (defects: TDefect[], dropdownQuery: string, searchQuery: string, dateFilter: TDateFilter) => {
     const filteredDefects = defects
       .sort((a, b) => sortByDate(a.createdDTime, b.createdDTime, dropdownQuery))
       .filter(defect => filterByDateRange(dateFilter, defect.createdDTime))

@@ -40,7 +40,7 @@ const _findUniqueValues = (array: unknown[], key: string) => {
         return []
     }
 
-    const arrayAllValues = array.map(item => _getNestedValue(item, key))
+    const arrayAllValues = array.map(item => _getNestedValue(item as Record<string, unknown>, key))
     if (!arrayAllValues.length) {
         return []
     }
@@ -53,11 +53,16 @@ const _findUniqueValues = (array: unknown[], key: string) => {
     return uniqueArrayValues
 }
 
-const _getNestedValue = (obj, path) => {
+const _getNestedValue = (obj: Record<string, unknown>, path: string): unknown => {
     if (!path.includes('.')) {
         return obj[path]
     }
     
-    return path.split('.').reduce((acc, part) => acc && acc[part], obj)
+    return path
+        .split('.')
+        .reduce<unknown>((acc, part) =>
+            acc && typeof acc === 'object' ? (acc as Record<string, unknown>)[part] : undefined,
+            obj
+        )
 }
 

@@ -1,13 +1,12 @@
-import { FocusEvent, useState } from 'react'
+import { useState, type FocusEvent } from 'react'
 import DatePicker from 'react-datepicker'
-
 import 'react-datepicker/dist/react-datepicker.css'
 import css from './UiDatePickerRange.module.css'
 
 
 type Props = {
-    onSelectStartDate: (e: FocusEvent<HTMLElement, Element>) => void
-    onSelectEndDate: (e: FocusEvent<HTMLElement, Element>) => void
+    onSelectStartDate: (e: FocusEvent<HTMLInputElement>) => void
+    onSelectEndDate: (e: FocusEvent<HTMLInputElement>) => void
 }
 
 export const UiDatePickerRange = (props: Props) => {
@@ -24,7 +23,6 @@ export const UiDatePickerRange = (props: Props) => {
                     placeholderText='13/09/2024'
                     selected={startDate} 
                     onChange={(date) => set_startDate(date)}
-                    onSelect={props.onSelectStartDate}
                     onBlur={props.onSelectStartDate}
                     selectsStart
                     startDate={startDate || undefined}
@@ -41,7 +39,6 @@ export const UiDatePickerRange = (props: Props) => {
                     placeholderText='15/09/2024'
                     selected={endDate} 
                     onChange={(date) => set_endDate(date)}
-                    onSelect={props.onSelectEndDate}
                     onBlur={props.onSelectEndDate}
                     selectsEnd
                     startDate={startDate || undefined}
