@@ -120,7 +120,6 @@ const _getCountBySeverityLevel_andCreateOptions = (defects: TDefect[]) => {
 }
 
 const _getCountByVoltageLevel_andCreateOptions = (defects: TDefect[]) => {
-  console.log(defects)
   return  {
     filterName: 'Úroveň napätia',
     filterOptions: [

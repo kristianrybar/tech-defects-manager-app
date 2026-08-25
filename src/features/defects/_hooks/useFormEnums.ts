@@ -40,7 +40,6 @@ const useFormEnums = () => {
   }
 
   useEffect(() => {
-    console.log('useFormEnums useEffect')
     if (!defects.length || !investmentRequests.length || !investmentRequestsTypes.length) {
       return
     }

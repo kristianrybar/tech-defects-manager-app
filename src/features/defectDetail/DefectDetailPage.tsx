@@ -18,19 +18,19 @@ const DefectDetailPage = () => {
    
   const { defects } = useDefectsStore()
   const [findedDefect, set_findedDefect] = useState<TDefect>()
-  const { url_id } = useParams()
+  const { defect_id } = useParams()
   const navigate = useNavigate()
   
   useEffect(() => {
-    if (!url_id || !defects) {
+    if (!defect_id || !defects) {
       return
     }
-    const _findedDefect = defects.find(d => d.defectID == url_id)
+    const _findedDefect = defects.find(d => d.defectID == defect_id)
     if (!_findedDefect) {
       return
     }
     set_findedDefect(_findedDefect)
-  }, [url_id, defects])
+  }, [defect_id, defects])
   
   const d = findedDefect
 
