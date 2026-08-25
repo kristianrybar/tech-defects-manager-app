@@ -1,6 +1,6 @@
 import { TInvestmentRequest } from '../_types/TInvestmentRequest'
 import InvestmentRequestItem from './investmentRequestItem/InvestmentRequestItem'
-// import css from './InvestmentRequests.module.css'
+
 
 type Props = {
   investmentRequests: TInvestmentRequest[]

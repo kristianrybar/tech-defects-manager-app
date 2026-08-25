@@ -1,6 +1,8 @@
+import { TInvestmentRequest } from '~/investmentRequests/_types/TInvestmentRequest'
 import { TDefect } from '../_types/TDefect'
 
-export const prepareEnumsForInvestmentForm = (defects: TDefect[], investmentRequests) => {
+
+export const prepareEnumsForInvestmentForm = (defects: TDefect[], investmentRequests: TInvestmentRequest[]) => {
     if (!defects.length || !investmentRequests.length) {
         return
     }
@@ -33,7 +35,7 @@ export const prepareEnumsForInvestmentForm = (defects: TDefect[], investmentRequ
     }
 }
 
-const _findUniqueValues = (array, key) => {
+const _findUniqueValues = (array: unknown[], key: string) => {
     if (!array.length || !key) {
         return []
     }

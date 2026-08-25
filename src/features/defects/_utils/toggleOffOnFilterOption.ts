@@ -1,5 +1,6 @@
 import { produce } from "immer"
 
+
 export const toggleOffOnFilterOption = (filterName, optionIndex) => {
   return produce((draft) => {
     const filter = draft.find(f => f.filterName === filterName);

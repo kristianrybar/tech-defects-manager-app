@@ -10,7 +10,8 @@ const _techDefectsRoute = {
 }
 
 const _techDefectRoute = {
-  path: (url_id?: string) => `/tech-defect/${url_id ? url_id : ':url_id'}`,
+  path: '/tech-defect/:defect_id',
+  createPath: (defect_id: string) => `/tech-defect/${defect_id}`,
   title: '',
   element: DefectDetailPage,
 }

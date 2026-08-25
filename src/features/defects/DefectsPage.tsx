@@ -97,7 +97,7 @@ const DefectsPage = () => {
                 <Defects
                   listMode={listMode}
                   filteredDefects={filteredDefects}
-                  onOpenDetail={(defectID) => navigate(routes.techDefect.path(defectID))}
+                  onOpenDetail={(defectID) => navigate(routes.techDefect.createPath(defectID))}
                   onSelectDefect={(defect, isChecked) => {
                     if (isChecked) {
                       selectDefect(defect)

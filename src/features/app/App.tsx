@@ -4,6 +4,7 @@ import 'leaflet/dist/leaflet.css'
 import './theme/global.css'
 import './theme/tailwind.css'
 
+
 const App = () => {
   return (
     <RouteSwitch />

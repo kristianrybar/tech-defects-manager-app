@@ -13,7 +13,7 @@ export const mockApiAny = async (url: string, method: string, payloadDummy?: unk
         console.log('🦢🦢🦢 mockApiAny', full, 'resp: ', data, 'payloadDummy: ', payloadDummy)
         return data
     } catch (e) {
-        return {error: e}
+        return { error: e }
     }
 }
 
@@ -24,8 +24,8 @@ const _apiProcess = async (response) => {
     try {
         json = JSON.parse(text)
     }
-    catch (e) {
-        return {error: 'response doesn\'t contain json'}
+    catch {
+        return { error: 'response doesn\'t contain json' }
     }
     return json
 }
